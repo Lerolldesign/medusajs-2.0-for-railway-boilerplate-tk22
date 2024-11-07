@@ -1,31 +1,117 @@
-<p align="center">
-  <a href="https://www.medusajs.com">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-      <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg" width=100>
-    </picture>
-  </a>
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://railway.app/brand/logo-light.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://railway.app/brand/logo-dark.svg">
-      <img alt="Railway logo" src="https://railway.app/brand/logo-light.svg" width=100>
-    </picture>
-  </a>
-</p>
+✔ Codemods have been applied successfully.
+⚠ Found 5 dependencies that seem incompatible with the upgraded package versions.
+You may have to update these packages to their latest version or file an issue to ask for support of the upgraded libraries.
 
-<h2 align="center">
-  Prebaked medusajs 2.0 monorepo (backend + postgres + redis + storefront)<br>
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">one-click deploy on railway!</a>
-</h2>
+@headlessui/react 1.7.19
+├── ✕ unmet peer react@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
+└── ✕ unmet peer react-dom@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
 
-<h1 align="center">
-  Need help?<br>
-  <a href="https://funkyton.com/medusajs-2-0-is-finally-here/">Step by step deploy guide, and video instructions</a>
-</h1>
+<p>
+@medusajs/ui 3.0.1-preview-20241010150540
+├── ✕ unmet peer react@"^18.0.0": found 19.0.0-rc-66855b96-20241106
+└── ✕ unmet peer react-dom@"^18.0.0": found 19.0.0-rc-66855b96-20241106
+en cours de téléchargement </p>
 
+@stripe/react-stripe-js 1.16.5
+├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+└── ✕ unmet peer react-dom@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
 
+react-instantsearch-hooks-web 6.47.3
+├── ✕ unmet peer react@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+└── ✕ unmet peer react-dom@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+
+react-intersection-observer 9.13.1
+├── ✕ unmet peer react@"^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0": found 19.0.0-rc-66855b96-20241106
+└── ✕ unmet peer react-dom@"^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0": found 19.0.0-rc-66855b96-20241106
+
+┬ @typescript-eslint/parser 8.13.0
+│ └── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+├─┬ eslint-config-next 15.0.3
+│ └─┬ @typescript-eslint/eslint-plugin 8.13.0
+│ ├── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+│ └─┬ @typescript-eslint/utils 8.13.0
+│ └── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+├─┬ @medusajs/icons 2.0.2
+│ └── ✕ unmet peer react@"^16.x || ^17.x || ^18.x": found 19.0.0-rc-66855b96-20241106
+├─┬ @headlessui/react 1.7.19
+│ ├── ✕ unmet peer react@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
+│ ├── ✕ unmet peer react-dom@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
+│ └─┬ @tanstack/react-virtual 3.10.9
+│ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ └── ✕ unmet peer react-dom@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+├─┬ @stripe/react-stripe-js 1.16.5
+│ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ └── ✕ unmet peer react-dom@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+├─┬ @medusajs/ui 4.0.1-preview-20241025150152
+│ ├── ✕ unmet peer react@^18.0.0: found 19.0.0-rc-66855b96-20241106
+│ ├── ✕ unmet peer react-dom@^18.0.0: found 19.0.0-rc-66855b96-20241106
+│ ├─┬ @medusajs/icons 2.0.1-preview-20241025150152
+│ │ └── ✕ unmet peer react@"^16.x || ^17.x || ^18.x": found 19.0.0-rc-66855b96-20241106
+│ ├─┬ @radix-ui/react-dialog 1.1.1
+│ │ └─┬ react-remove-scroll 2.5.7
+│ │ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ │ ├─┬ use-sidecar 1.1.2
+│ │ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ │ ├─┬ react-style-singleton 2.2.1
+│ │ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ │ ├─┬ react-remove-scroll-bar 2.3.6
+│ │ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ │ └─┬ use-callback-ref 1.3.2
+│ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ └─┬ react-currency-input-field 3.8.0
+│ └── ✕ unmet peer react@"^16.9.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+└─┬ react-instantsearch-hooks-web 6.47.3
+├── ✕ unmet peer react@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+├── ✕ unmet peer react-dom@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+└─┬ react-instantsearch-hooks 6.47.3
+├── ✕ unmet peer react@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+└─┬ use-sync-external-store 1.2.2
+└── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+
+├─┬ @typescript-eslint/parser 8.13.0
+│ └── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+├─┬ eslint-config-next 15.0.3
+│ └─┬ @typescript-eslint/eslint-plugin 8.13.0
+│ ├── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+│ └─┬ @typescript-eslint/type-utils 8.13.0
+│ └─┬ @typescript-eslint/utils 8.13.0
+│ └── ✕ unmet peer eslint@"^8.57.0 || ^9.0.0": found 8.10.0
+├─┬ @medusajs/ui 4.0.1-preview-20241025150152
+│ ├── ✕ unmet peer react@^18.0.0: found 19.0.0-rc-66855b96-20241106
+│ ├── ✕ unmet peer react-dom@^18.0.0: found 19.0.0-rc-66855b96-20241106
+│ ├─┬ @radix-ui/react-dialog 1.1.1
+│ │ └─┬ react-remove-scroll 2.5.7
+│ │ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106  
+│ │ ├─┬ react-remove-scroll-bar 2.3.6
+│ │ │ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106  
+│ │ │ └─┬ react-style-singleton 2.2.1
+│ │ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ │ ├─┬ use-sidecar 1.1.2
+│ │ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106  
+│ │ └─┬ use-callback-ref 1.3.2
+│ │ └── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106  
+│ ├─┬ @medusajs/icons 2.0.1-preview-20241025150152
+│ │ └── ✕ unmet peer react@"^16.x || ^17.x || ^18.x": found 19.0.0-rc-66855b96-20241106
+│ └─┬ react-currency-input-field 3.8.0
+│ └── ✕ unmet peer react@"^16.9.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106  
+├─┬ @medusajs/icons 2.0.2
+│ └── ✕ unmet peer react@"^16.x || ^17.x || ^18.x": found 19.0.0-rc-66855b96-20241106
+├─┬ @headlessui/react 1.7.19
+│ ├── ✕ unmet peer react@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
+│ ├── ✕ unmet peer react-dom@"^16 || ^17 || ^18": found 19.0.0-rc-66855b96-20241106
+│ └─┬ @tanstack/react-virtual 3.10.9
+│ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ └── ✕ unmet peer react-dom@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+├─┬ @stripe/react-stripe-js 1.16.5
+│ ├── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+│ └── ✕ unmet peer react-dom@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
+└─┬ react-instantsearch-hooks-web 6.47.3
+├── ✕ unmet peer react@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+├── ✕ unmet peer react-dom@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+└─┬ react-instantsearch-hooks 6.47.3
+├── ✕ unmet peer react@">= 16.8.0 < 19": found 19.0.0-rc-66855b96-20241106
+└─┬ use-sync-external-store 1.2.2
+└── ✕ unmet peer react@"^16.8.0 || ^17.0.0 || ^18.0.0": found 19.0.0-rc-66855b96-20241106
 
 <p align="center">
 Combine Medusa's modules for your commerce backend with the newest Next.js 14 features for a performant storefront.</p>
@@ -42,51 +128,4 @@ Combine Medusa's modules for your commerce backend with the newest Next.js 14 fe
   </a>
 </p>
 
-## About this boilerplate
-This boilerplate is a monorepo consisting of the officially released MedusaJS 2.0 backend and storefront application.  It is a pre-configured, ready-to-deploy solution, modified for seamless deployment on [railway.app](https://railway.app?referralCode=-Yg50p).
-
-Updated: to `version 2.0.1` 🥳
-
-## Preconfigured 3rd party integrations
-
-- Resend email integration [setup video](https://youtu.be/pbdZm26YDpE?si=LQTHWeZMLD4w3Ahw) - special thanks to [aleciavogel](https://github.com/aleciavogel) for Resend notification service, and eact-email implementation! [README](backend/src/modules/email-notifications/README.md)
-- Stripe payment service: [setup video](https://youtu.be/dcSOpIzc1Og)
-
-# /backend
-
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
-
-- Install dependencies using either:
-  - `npm i`
-  - `pnpm install` (now supported!)
-- Rename `.env.template` ->  `.env`
-- To connect to your online database from your local machine, copy the `DATABASE_URL` value auto-generated on Railway and add it to your `.env` file.
-
-### requirements
-- **postgres database** (will be automatically generated if using railway template)
-- **redis** (will be automatically generated if using railway template)
-
-### commands
-`cd backend/`
-`npm run dev` or `pnpm dev` will start the backend (and admin dashboard frontend on `localhost:9000/app`) in development mode.
-`pnpm build && pnpm start` will compile the project and run from compiled source. This can be useful for reproducing issues on your cloud instance.
-
-# /storefront
-
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
-
-Install dependencies `npm i`
-Rename `.env.local.template` ->  `.env.local`
-
-### requirements
-- A running backend on port 9000 is required to fetch product data and other information needed to build Next.js pages.
-
-### commands
-`cd storefront/`
-`npm run dev` will run the storefront on uncompiled code, with hot-reloading as files are saved with changes.
-
-## Useful resources
-- How to setup credit card payment with Stripe payment module: https://youtu.be/dcSOpIzc1Og
-- https://funkyton.com/medusajs-2-0-is-finally-here/#succuessfully-deployed-whats-next
+🥳
