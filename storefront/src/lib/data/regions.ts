@@ -1,25 +1,25 @@
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
-import { cache } from "react"
+
 import { HttpTypes } from "@medusajs/types"
 
-export const listRegions = cache(async function () {
+export const listRegions = async function () {
   return sdk.store.region
     .list({}, { next: { tags: ["regions"] } })
     .then(({ regions }) => regions)
     .catch(medusaError)
-})
+}
 
-export const retrieveRegion = cache(async function (id: string) {
+export const retrieveRegion = async function (id: string) {
   return sdk.store.region
     .retrieve(id, {}, { next: { tags: ["regions"] } })
     .then(({ region }) => region)
     .catch(medusaError)
-})
+}
 
 const regionMap = new Map<string, HttpTypes.StoreRegion>()
 
-export const getRegion = cache(async function (countryCode: string) {
+export const getRegion = async function (countryCode: string) {
   try {
     if (regionMap.has(countryCode)) {
       return regionMap.get(countryCode)
@@ -45,4 +45,4 @@ export const getRegion = cache(async function (countryCode: string) {
   } catch (e: any) {
     return null
   }
-})
+}
