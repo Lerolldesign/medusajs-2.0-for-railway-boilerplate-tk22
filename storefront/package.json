@@ -70,10 +70,5 @@
     "prettier": "^2.8.8",
     "tailwindcss": "^3.0.23",
     "typescript": "5.7.0-beta"
-  },
-  "packageManager": "pnpm@9.12.3",
-  "engines": {
-    "node": "20.x",
-    "npm": "10.x"
   }
 }
