@@ -10,7 +10,7 @@ import { getAuthHeaders, removeAuthToken, setAuthToken } from "./cookies"
 
 export const getCustomer = cache(async function () {
   return await sdk.store.customer
-    .retrieve({}, { next: { tags: ["customer"] }, ...getAuthHeaders() })
+    .retrieve({}, await { next: { tags: ["customer"] }, ...getAuthHeaders() })
     .then(({ customer }) => customer)
     .catch(() => null)
 })
@@ -19,7 +19,7 @@ export const updateCustomer = cache(async function (
   body: HttpTypes.StoreUpdateCustomer
 ) {
   const updateRes = await sdk.store.customer
-    .update(body, {}, getAuthHeaders())
+    .update(body, {}, await getAuthHeaders())
     .then(({ customer }) => customer)
     .catch(medusaError)
 
@@ -43,7 +43,7 @@ export async function signup(_currentState: unknown, formData: FormData) {
     })
 
     const customHeaders = { authorization: `Bearer ${token}` }
-    
+
     const { customer: createdCustomer } = await sdk.store.customer.create(
       customerForm,
       {},
@@ -55,7 +55,9 @@ export async function signup(_currentState: unknown, formData: FormData) {
       password,
     })
 
-    setAuthToken(typeof loginToken === 'string' ? loginToken : loginToken.location)
+    setAuthToken(
+      typeof loginToken === "string" ? loginToken : loginToken.location
+    )
 
     revalidateTag("customer")
     return createdCustomer
@@ -72,7 +74,7 @@ export async function login(_currentState: unknown, formData: FormData) {
     await sdk.auth
       .login("customer", "emailpass", { email, password })
       .then((token) => {
-        setAuthToken(typeof token === 'string' ? token : token.location)
+        setAuthToken(typeof token === "string" ? token : token.location)
         revalidateTag("customer")
       })
   } catch (error: any) {
@@ -106,7 +108,7 @@ export const addCustomerAddress = async (
   }
 
   return sdk.store.customer
-    .createAddress(address, {}, getAuthHeaders())
+    .createAddress(address, {}, await getAuthHeaders())
     .then(({ customer }) => {
       revalidateTag("customer")
       return { success: true, error: null }
@@ -120,7 +122,7 @@ export const deleteCustomerAddress = async (
   addressId: string
 ): Promise<void> => {
   await sdk.store.customer
-    .deleteAddress(addressId, getAuthHeaders())
+    .deleteAddress(addressId, await getAuthHeaders())
     .then(() => {
       revalidateTag("customer")
       return { success: true, error: null }
@@ -150,7 +152,7 @@ export const updateCustomerAddress = async (
   }
 
   return sdk.store.customer
-    .updateAddress(addressId, address, {}, getAuthHeaders())
+    .updateAddress(addressId, address, {}, await getAuthHeaders())
     .then(() => {
       revalidateTag("customer")
       return { success: true, error: null }
