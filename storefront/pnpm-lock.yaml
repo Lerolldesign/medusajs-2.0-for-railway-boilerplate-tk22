@@ -14,6 +14,9 @@ importers:
       '@hookform/error-message':
         specifier: ^2.0.0
         version: 2.0.1(react-dom@18.2.0(react@18.2.0))(react-hook-form@7.53.1(react@18.2.0))(react@18.2.0)
+      '@medusajs/icons':
+        specifier: ^2.0.2
+        version: 2.0.2(react@18.2.0)
       '@medusajs/js-sdk':
         specifier: preview
         version: 2.0.2-preview-20241107150233(awilix@8.0.1)
@@ -504,6 +507,11 @@ packages:
 
   '@medusajs/icons@2.0.1-preview-20241025150152':
     resolution: {integrity: sha512-8tO3ZBcuHOX0iwe/qb2tvWb5GsKB+Yc/JaLkPumuVOkRIbkgHJcTvF1VwWrr3B2xiJsx6yRV1NQEXPYWh/coxg==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
+
+  '@medusajs/icons@2.0.2':
+    resolution: {integrity: sha512-5M01e770Xc10AREjkJEcQ4FBj3obt+CU+iKYJaAjqjA1lk7oDG65y5GLUJjsSpPw5US6wyBRQUifzQjwen2mhQ==}
     peerDependencies:
       react: ^16.x || ^17.x || ^18.x
 
@@ -4186,6 +4194,10 @@ snapshots:
   '@medusajs/client-types@0.2.12-preview-20240505115807': {}
 
   '@medusajs/icons@2.0.1-preview-20241025150152(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
+
+  '@medusajs/icons@2.0.2(react@18.2.0)':
     dependencies:
       react: 18.2.0
 
