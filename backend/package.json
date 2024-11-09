@@ -59,7 +59,6 @@
     "typescript": "^5.6.2",
     "vite": "^5.2.11"
   },
-  "packageManager": "pnpm@9.10.0",
   "engines": {
     "node": "22.x",
     "npm": "10.x"
