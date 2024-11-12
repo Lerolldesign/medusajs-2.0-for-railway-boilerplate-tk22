@@ -1,4 +1,5 @@
 import { Text, clx } from "@medusajs/ui"
+/* @ts-expect-error */
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import React from "react"
 
