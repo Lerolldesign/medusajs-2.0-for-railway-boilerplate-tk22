@@ -15,7 +15,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace('https://', ''),
+        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace(
+          "https://",
+          ""
+        ),
       },
       {
         protocol: "https",
@@ -29,11 +32,27 @@ const nextConfig = {
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "lunecloud.fra1.digitaloceanspaces.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+      {
+        protocol: "http",
+        hostname: "res.cloudinary.com",
+      },
     ],
   },
   serverRuntimeConfig: {
-    port: process.env.PORT || 3000
-  }
+    port: process.env.PORT || 3000,
+  },
 }
 
 module.exports = nextConfig
