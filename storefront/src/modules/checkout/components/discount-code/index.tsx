@@ -1,12 +1,12 @@
 "use client"
 
-import { Badge, Heading, Input, Label, Text, Tooltip } from "@medusajs/ui"
+import { Badge, Heading, Input, Label, Text } from "@medusajs/ui"
 import React from "react"
 import { useFormState } from "react-dom"
 
-import { applyPromotions, submitPromotionForm } from "@lib/data/cart"
+import { applyPromotions } from "@lib/data/cart"
+
 import { convertToLocale } from "@lib/util/money"
-import { InformationCircleSolid } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import Trash from "@modules/common/icons/trash"
 import ErrorMessage from "../error-message"
@@ -174,3 +174,6 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
 }
 
 export default DiscountCode
+function submitPromotionForm(state: null): Promise<null> | null {
+  throw new Error("Function not implemented.")
+}

@@ -227,7 +227,7 @@ export async function initiatePaymentSession(
 }
 
 export async function applyPromotions(codes: string[]) {
-  const cartId = getCartId()
+  const cartId = await getCartId()
   if (!cartId) {
     throw new Error("No existing cart found")
   }
