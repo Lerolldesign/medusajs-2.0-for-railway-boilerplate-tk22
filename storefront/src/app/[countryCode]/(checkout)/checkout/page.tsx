@@ -1,6 +1,5 @@
 import { enrichLineItems, retrieveCart } from "@lib/data/cart"
 import { getCustomer } from "@lib/data/customer"
-import { HttpTypes } from "@medusajs/types"
 import Wrapper from "@modules/checkout/components/payment-wrapper"
 import CheckoutForm from "@modules/checkout/templates/checkout-form"
 import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
@@ -10,10 +9,7 @@ const fetchCartData = async () => {
   if (!cart) throw new Error("Cart not found")
 
   if (cart?.items?.length) {
-    cart.items = (await enrichLineItems(
-      cart.items,
-      cart.region_id!
-    )) as HttpTypes.StoreCartLineItem[]
+    cart.items = (await enrichLineItems(cart.items, cart.region_id!)) as any[]
   }
 
   return cart

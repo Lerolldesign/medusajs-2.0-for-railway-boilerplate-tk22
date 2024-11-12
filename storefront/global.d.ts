@@ -3,3 +3,4 @@ declare module "*.scss"
 declare module "framer-motion"
 
 declare module "next/server"
+declare module "@medusajs/types"

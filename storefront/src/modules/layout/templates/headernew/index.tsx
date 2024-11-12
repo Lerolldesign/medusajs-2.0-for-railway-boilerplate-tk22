@@ -14,11 +14,11 @@ export default function HeaderNew() {
         <Suspense
           fallback={
             <LocalizedClientLink
-              className="hover:text-ui-fg-base flex gap-2"
+              className="hover:text-ui-fg-base flex gap-2 !text-lune bg-browny/60 "
               href="/cart"
               data-testid="nav-cart-link"
             >
-              Cart (0)
+              Article (0)
             </LocalizedClientLink>
           }
         >
