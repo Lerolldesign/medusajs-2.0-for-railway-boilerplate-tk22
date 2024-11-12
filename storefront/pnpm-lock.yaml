@@ -21,7 +21,7 @@ importers:
         specifier: preview
         version: 2.0.2-preview-20241107150233(awilix@8.0.1)(vite@4.5.5(@types/node@20.17.6)(sass@1.80.6)(terser@5.36.0))
       '@medusajs/types':
-        specifier: preview
+        specifier: 2.0.2-preview-20241107150233
         version: 2.0.2-preview-20241107150233(awilix@8.0.1)(vite@4.5.5(@types/node@20.17.6)(sass@1.80.6)(terser@5.36.0))
       '@medusajs/ui':
         specifier: preview
