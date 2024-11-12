@@ -1,10 +1,9 @@
 import { Metadata } from "next"
 
-import OrderCompletedTemplate from "@modules/order/templates/order-completed-template"
-import { notFound } from "next/navigation"
 import { enrichLineItems } from "@lib/data/cart"
 import { retrieveOrder } from "@lib/data/orders"
-import { HttpTypes } from "@medusajs/types"
+import OrderCompletedTemplate from "@modules/order/templates/order-completed-template"
+import { notFound } from "next/navigation"
 
 type Props = {
   params: { id: string }
@@ -22,7 +21,7 @@ async function getOrder(id: string) {
   return {
     ...order,
     items: enrichedItems,
-  } as unknown as HttpTypes.StoreOrder
+  } as unknown as any
 }
 
 export const metadata: Metadata = {

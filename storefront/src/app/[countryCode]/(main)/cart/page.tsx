@@ -1,8 +1,7 @@
-import { Metadata } from "next"
 import CartTemplate from "@modules/cart/templates"
+import { Metadata } from "next"
 
 import { enrichLineItems, retrieveCart } from "@lib/data/cart"
-import { HttpTypes } from "@medusajs/types"
 import { getCustomer } from "@lib/data/customer"
 
 export const metadata: Metadata = {
@@ -19,7 +18,7 @@ const fetchCart = async () => {
 
   if (cart?.items?.length) {
     const enrichedItems = await enrichLineItems(cart?.items, cart?.region_id!)
-    cart.items = enrichedItems as HttpTypes.StoreCartLineItem[]
+    cart.items = enrichedItems
   }
 
   return cart

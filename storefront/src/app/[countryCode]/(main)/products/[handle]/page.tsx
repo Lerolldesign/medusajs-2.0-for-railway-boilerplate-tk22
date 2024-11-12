@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import ProductTemplate from "@modules/products/templates"
-import { getRegion, listRegions } from "@lib/data/regions"
 import { getProductByHandle, getProductsList } from "@lib/data/products"
+import { getRegion, listRegions } from "@lib/data/regions"
+import ProductTemplate from "@modules/products/templates"
 
 type Props = {
   params: { countryCode: string; handle: string }
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
   const countryCodes = await listRegions().then(
     (regions) =>
       regions
-        ?.map((r) => r.countries?.map((c) => c.iso_2))
+        ?.map((r: any) => r.countries?.map((c: any) => c.iso_2))
         .flat()
         .filter(Boolean) as string[]
   )

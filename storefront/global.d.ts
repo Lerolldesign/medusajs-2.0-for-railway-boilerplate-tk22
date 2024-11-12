@@ -4,3 +4,4 @@ declare module "framer-motion"
 
 declare module "next/server"
 declare module "@medusajs/types"
+declare module "next-sanity/studio"
