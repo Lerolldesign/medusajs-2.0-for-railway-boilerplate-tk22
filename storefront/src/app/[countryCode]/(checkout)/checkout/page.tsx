@@ -1,10 +1,9 @@
-import React from "react"
+import { enrichLineItems, retrieveCart } from "@lib/data/cart"
+import { getCustomer } from "@lib/data/customer"
+import { HttpTypes } from "@medusajs/types"
 import Wrapper from "@modules/checkout/components/payment-wrapper"
 import CheckoutForm from "@modules/checkout/templates/checkout-form"
 import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
-import { enrichLineItems, retrieveCart } from "@lib/data/cart"
-import { HttpTypes } from "@medusajs/types"
-import { getCustomer } from "@lib/data/customer"
 
 const fetchCartData = async () => {
   const cart = await retrieveCart()

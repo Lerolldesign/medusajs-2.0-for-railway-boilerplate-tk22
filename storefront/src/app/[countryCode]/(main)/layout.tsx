@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import Footer from "@modules/layout/templates/footer"
 //import Nav from "@modules/layout/templates/nav"
 import { getBaseURL } from "@lib/util/env"
-import Logo_brown from "@modules/layout/templates/logoBrown"
+import HeaderNew from "@modules/layout/templates/headernew"
 import Ornements from "@modules/layout/templates/ornements"
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
     <>
       {" "}
       <Ornements />
-      <Logo_brown />
+      <HeaderNew />
       {props.children}
       <Footer />
     </>

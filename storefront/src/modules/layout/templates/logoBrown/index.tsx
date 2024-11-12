@@ -28,13 +28,23 @@ export default Logo_brown
 
       <Link href="./">
         <Image
-          className="w-[18vw] md:w-[11vw] lg:w-[6.5vw] 2xl:w-[5.5vw] left-[10%] md:left-[8%] top-[7%] cursor-pointer fixed lg:left-[5%] 2xl:left-[4%] md:top-[7%] z-50 "
+          className="w-[18vw] md:w-[11vw] lg:w-[6.5vw] 2xl:w-[5.5vw]  "
           src="https://lunecloud.fra1.digitaloceanspaces.com/logo-ocre.png"
           height="100"
           width="100"
           alt="Logo"
         />
       </Link>
+
+      {/**   <Link href="./">
+        <Image
+          className="w-[18vw] md:w-[11vw] lg:w-[6.5vw] 2xl:w-[5.5vw] left-[10%] md:left-[8%] top-[7%] cursor-pointer fixed lg:left-[5%] 2xl:left-[4%] md:top-[7%] z-50 "
+          src="https://lunecloud.fra1.digitaloceanspaces.com/logo-ocre.png"
+          height="100"
+          width="100"
+          alt="Logo"
+        />
+      </Link> */}
     </div>
   )
 }
