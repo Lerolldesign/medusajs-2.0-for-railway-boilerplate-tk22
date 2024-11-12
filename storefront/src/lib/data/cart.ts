@@ -1,5 +1,5 @@
 "use server"
-
+// @ts-ignore
 import { HttpTypes } from "@medusajs/types"
 import { omit } from "lodash"
 import { revalidateTag } from "next/cache"
@@ -152,9 +152,8 @@ export async function deleteLineItem(lineId: string) {
 }
 
 export async function enrichLineItems(
-  lineItems: // @ts-ignore
-  | HttpTypes.StoreCartLineItem[]
-    // @ts-ignore
+  lineItems:
+    | HttpTypes.StoreCartLineItem[]
     | HttpTypes.StoreOrderLineItem[]
     | null,
   regionId: string
@@ -188,7 +187,6 @@ export async function enrichLineItems(
         product: omit(product, "variants"),
       },
     }
-    // @ts-ignore
   }) as HttpTypes.StoreCartLineItem[]
 
   return enrichedItems
@@ -215,7 +213,6 @@ export async function setShippingMethod({
 }
 
 export async function initiatePaymentSession(
-  // @ts-ignore
   cart: HttpTypes.StoreCart,
   data: {
     provider_id: string

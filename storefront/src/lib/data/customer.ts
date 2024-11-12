@@ -2,6 +2,7 @@
 
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
+// @ts-ignore
 import { HttpTypes } from "@medusajs/types"
 import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
@@ -11,7 +12,7 @@ import { getAuthHeaders, removeAuthToken, setAuthToken } from "./cookies"
 export const getCustomer = cache(async function () {
   return await sdk.store.customer
     .retrieve({}, await { next: { tags: ["customer"] }, ...getAuthHeaders() })
-    .then(({ customer }) => customer)
+    .then(({ customer }: { customer: any }) => customer)
     .catch(() => null)
 })
 
@@ -20,7 +21,7 @@ export const updateCustomer = cache(async function (
 ) {
   const updateRes = await sdk.store.customer
     .update(body, {}, await getAuthHeaders())
-    .then(({ customer }) => customer)
+    .then(({ customer }: { customer: any }) => customer)
     .catch(medusaError)
 
   revalidateTag("customer")
@@ -73,7 +74,7 @@ export async function login(_currentState: unknown, formData: FormData) {
   try {
     await sdk.auth
       .login("customer", "emailpass", { email, password })
-      .then((token) => {
+      .then((token: any) => {
         setAuthToken(typeof token === "string" ? token : token.location)
         revalidateTag("customer")
       })
@@ -109,11 +110,11 @@ export const addCustomerAddress = async (
 
   return sdk.store.customer
     .createAddress(address, {}, await getAuthHeaders())
-    .then(({ customer }) => {
+    .then(({ customer }: { customer: any }) => {
       revalidateTag("customer")
       return { success: true, error: null }
     })
-    .catch((err) => {
+    .catch((err: any) => {
       return { success: false, error: err.toString() }
     })
 }
@@ -127,7 +128,7 @@ export const deleteCustomerAddress = async (
       revalidateTag("customer")
       return { success: true, error: null }
     })
-    .catch((err) => {
+    .catch((err: any) => {
       return { success: false, error: err.toString() }
     })
 }
@@ -157,7 +158,7 @@ export const updateCustomerAddress = async (
       revalidateTag("customer")
       return { success: true, error: null }
     })
-    .catch((err) => {
+    .catch((err: any) => {
       return { success: false, error: err.toString() }
     })
 }

@@ -12,8 +12,8 @@ export const retrieveOrder = cache(async function (id: string) {
       { fields: "*payment_collections.payments" },
       await { next: { tags: ["order"] }, ...getAuthHeaders() }
     )
-    .then(({ order }) => order)
-    .catch((err) => medusaError(err))
+    .then(({ order }: { order: any }) => order)
+    .catch((err: any) => medusaError(err))
 })
 
 export const listOrders = cache(async function (
@@ -25,6 +25,6 @@ export const listOrders = cache(async function (
       { limit, offset },
       await { next: { tags: ["order"] }, ...getAuthHeaders() }
     )
-    .then(({ orders }) => orders)
-    .catch((err) => medusaError(err))
+    .then(({ orders }: { orders: any }) => orders)
+    .catch((err: any) => medusaError(err))
 })
