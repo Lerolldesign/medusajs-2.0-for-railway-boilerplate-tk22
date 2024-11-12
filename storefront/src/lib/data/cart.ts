@@ -23,7 +23,7 @@ export async function retrieveCart() {
       {},
       await { next: { tags: ["cart"] }, ...getAuthHeaders() }
     )
-    .then(({ cart }) => cart)
+    .then(({ cart }: { cart: any }) => cart)
     .catch(() => {
       return null
     })
@@ -57,15 +57,17 @@ export async function getOrSetCart(countryCode: string) {
   return cart
 }
 
-export async function updateCart(data: HttpTypes.StoreUpdateCart) {
+export async function updateCart(data: any) {
   const cartId = await getCartId()
   if (!cartId) {
-    throw new Error("No existing cart found, please create one before updating")
+    throw new Error(
+      "Aucun panier existant trouvé, veuillez en créer un avant de mettre à jour"
+    )
   }
 
   return sdk.store.cart
     .update(cartId, data, {}, await getAuthHeaders())
-    .then(({ cart }) => {
+    .then(({ cart }: { cart: any }) => {
       revalidateTag("cart")
       return cart
     })
@@ -150,8 +152,9 @@ export async function deleteLineItem(lineId: string) {
 }
 
 export async function enrichLineItems(
-  lineItems:
-    | HttpTypes.StoreCartLineItem[]
+  lineItems: // @ts-ignore
+  | HttpTypes.StoreCartLineItem[]
+    // @ts-ignore
     | HttpTypes.StoreOrderLineItem[]
     | null,
   regionId: string
@@ -185,6 +188,7 @@ export async function enrichLineItems(
         product: omit(product, "variants"),
       },
     }
+    // @ts-ignore
   }) as HttpTypes.StoreCartLineItem[]
 
   return enrichedItems
@@ -211,6 +215,7 @@ export async function setShippingMethod({
 }
 
 export async function initiatePaymentSession(
+  // @ts-ignore
   cart: HttpTypes.StoreCart,
   data: {
     provider_id: string
@@ -219,7 +224,7 @@ export async function initiatePaymentSession(
 ) {
   return sdk.store.payment
     .initiatePaymentSession(cart, data, {}, await getAuthHeaders())
-    .then((resp) => {
+    .then((resp: any) => {
       revalidateTag("cart")
       return resp
     })
@@ -299,7 +304,7 @@ export async function placeOrder() {
 
   const cartRes = await sdk.store.cart
     .complete(cartId, {}, await getAuthHeaders())
-    .then((cartRes) => {
+    .then((cartRes: any) => {
       revalidateTag("cart")
       return cartRes
     })
