@@ -11,7 +11,7 @@ const Hero = () => {
           >
             Well done! You have successfully deployed your Medusa 2.0 store on
             Railway!
-            <span className="text-green-500 font-bold uppercase">
+            <span className="text-lune font-lune font-bold uppercase">
               hello leroll de ouf.ooop
             </span>
           </Heading>
