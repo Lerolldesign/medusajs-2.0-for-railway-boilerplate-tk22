@@ -60,21 +60,21 @@ export default async function CarouselProject() {
             </div>
           </div>
           {galeries.map((galerie, index) => (
-            <CarouselItem key={index} className="flex flex-col mb-10">
+            <CarouselItem key={index} className="flex flex-col mb-10 mx-3 ">
               <Link href={`/projets/${galerie?.slug?.current}`}>
                 <Image
                   src={urlForImage(galerie?.image1)}
                   alt={galerie.title}
                   width={2880}
                   height={1620}
-                  className="md:rounded-[2vw] rounded-[15vw] object-cover w-full h-auto md:h-auto md:max-h-[50vh] hover:opacity-40 transition duration-150 ease-out hover:ease-in"
+                  className="h-[40vh] w-full md:h-[60vh] grayscale hover:grayscale-0 bg-gray-800 rounded-lg transition-transform duration-300 group-hover:scale-105 md:rounded-[2vw] "
                 />
               </Link>
-              <div className="mx-5 mt-3">
+              <div className="relative bottom-32 bg-black backdrop-blur-lg bg-opacity-20 w-full md:rounded-b-[2vw] p-5">
                 <h2 className="font-semibold text-[1.4rem] md:text-[1.30rem] lg:text-[1.6rem] 2xl:text-[2rem] py-1 text-lune font-lune uppercase">
                   {galerie.title}
                 </h2>
-                <h3 className="text-[.85rem] md:text-[.75rem] lg:text-[.85rem] 2xl:text-[.95rem] pb-5">
+                <h3 className="text-[.85rem] md:text-[.75rem] lg:text-[.85rem] 2xl:text-[.95rem] pb-5 text-white">
                   {galerie.excerpt}
                 </h3>
                 <Button
