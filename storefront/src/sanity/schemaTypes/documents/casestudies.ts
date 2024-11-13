@@ -75,12 +75,10 @@ export default defineType({
   preview: {
     select: {
       title: "title",
-      media: "coverImage",
+      media: "image1",
     },
-    prepare({}) {
-      const subtitles = [].filter(Boolean)
-
-      return {}
+    prepare({ title, media }: { title: string; media: any }) {
+      return { title, media }
     },
   },
 })
