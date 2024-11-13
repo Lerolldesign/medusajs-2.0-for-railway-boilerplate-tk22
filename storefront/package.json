@@ -36,6 +36,7 @@
     "@sanity/vision": "3",
     "@stripe/react-stripe-js": "^1.7.2",
     "@stripe/stripe-js": "^1.29.0",
+    "@studio-freight/hamo": "^0.6.33",
     "@studio-freight/react-lenis": "^0.0.47",
     "algoliasearch": "^4.20.0",
     "axios": "^1.6.7",
