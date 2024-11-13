@@ -7,6 +7,16 @@ export default defineType({
   title: "Casestudies",
   icon: DocumentTextIcon,
   type: "document",
+  groups: [
+    {
+      name: "seo",
+      title: "seo",
+    },
+    {
+      name: "images",
+      title: "Images de la galerie",
+    },
+  ],
   fields: [
     defineField({
       name: "title",
@@ -18,7 +28,7 @@ export default defineType({
       name: "slug",
       title: "Slug",
       type: "slug",
-      description: "A slug is required for the post to show up in the preview",
+      description: "Cela génére l'url d'accès au casestudy",
       options: {
         source: "title",
         maxLength: 96,
@@ -62,6 +72,77 @@ export default defineType({
       name: "image1",
       title: "Photo miniature & page",
       type: "image",
+      group: "images",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "image2",
+      title: "image2",
+      type: "image",
+      group: "images",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "image3",
+      title: "image3",
+      type: "image",
+      group: "images",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "image4",
+      title: "image4",
+      type: "image",
+      group: "images",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "image5",
+      title: "image5",
+      type: "image",
+      group: "images",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "image6",
+      title: "image6",
+      type: "image",
+      group: "images",
       options: { hotspot: true },
       fields: [
         {
