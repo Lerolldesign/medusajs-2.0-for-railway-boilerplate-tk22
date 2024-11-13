@@ -6,7 +6,7 @@ export default function page() {
   return (
     <>
       <div className="flex flex-col gap-0 space-y-[-20vh] md:space-y-[-18vh] lg:space-y-0 md:justify-between h-[302vh] md:h-[295vh] lg:h-screen lg:flex-row bg-browny noise">
-        <Link href="/services/illuminer-votre-interieur" className="">
+        <Link href="/prestations/illuminer-votre-interieur" className="">
           <div className="">
             <Image
               src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1726666936/La%20Lune%20Curieuse/Sections/abat-jours-trio_nirmpw.webp"
@@ -32,7 +32,7 @@ export default function page() {
           </div>
         </Link>
 
-        <Link href="/services/enjoliver-vos-espaces" className="">
+        <Link href="/prestations/enjoliver-vos-espaces" className="">
           <div className="">
             <Image
               src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1726667938/La%20Lune%20Curieuse/Sections/patshwork_doqeu2.webp"
@@ -56,7 +56,7 @@ export default function page() {
           </div>
         </Link>
 
-        <Link href="/services/restaurer-vos-sieges" className="">
+        <Link href="/prestations/restaurer-vos-sieges" className="">
           <div className="">
             <Image
               src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1726668903/La%20Lune%20Curieuse/Sections/IMG_20220722_100336593_2_ss8tlf.jpg"
