@@ -1,3 +1,6 @@
+import galerie from "./documents/casestudies"
+
 export const schemaTypes = [
-  // Singletons
+  // Documents
+  galerie,
 ]

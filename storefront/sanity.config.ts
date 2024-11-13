@@ -9,12 +9,14 @@ import { defineConfig } from "sanity"
 import { structureTool } from "sanity/structure"
 import { structure } from "./src/sanity/structure"
 
+import Logo_brown_sanity from "@modules/layout/templates/logoSanity"
 import { apiVersion, dataset, projectId } from "./src/sanity/env"
 import { schemaTypes } from "./src/sanity/schemaTypes"
 
 export default defineConfig({
   basePath: "/studio",
   name: "default",
+  icon: Logo_brown_sanity,
   title: "La Lune Curieuse",
   projectId,
   dataset,
