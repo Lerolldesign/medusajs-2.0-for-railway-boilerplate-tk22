@@ -1,5 +1,7 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
+
+import HeaderMenu from "@modules/layout/templates/menu"
 import { Suspense } from "react"
 import { PiUserCircleGearFill } from "react-icons/pi"
 import Logo_brown from "../logoBrown"
@@ -36,6 +38,9 @@ export default function HeaderNew() {
             }
           >
             <CartButton />
+          </Suspense>
+          <Suspense>
+            <HeaderMenu />
           </Suspense>
         </div>
       </header>

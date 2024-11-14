@@ -14,7 +14,9 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
   return (
     <>
       <Ornements />
+
       <HeaderNew />
+
       {props.children}
       <Footer />
     </>
