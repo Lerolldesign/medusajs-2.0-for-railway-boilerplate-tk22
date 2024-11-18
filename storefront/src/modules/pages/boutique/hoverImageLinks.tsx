@@ -11,25 +11,25 @@ export const HoverImageLinks = () => {
           heading="Coussins"
           subheading="Je réalise des coussins sur mesures intérieurs ou extérieurs pour agrémenter tous style de décoration"
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1712146736/La%20Lune%20Curieuse/Collection/Coussins/japuro_ebyesc.png"
-          href="/collections/coussins"
+          href="/categories/coussins"
         />
         <Link
           heading="Abat-jour"
           subheading="Abat-jour originaux sur mesure à poser, suspension, applique, baladeuse, cousus ou contrecollés."
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731921806/La%20Lune%20Curieuse/Collection/abat%20jour/ao/double-bat_yjdyoq.png"
-          href="/collections/abat-jour"
+          href="/categories/abat-jour"
         />
         <Link
           heading="Tabourets"
           subheading="Tabouret upcyclé et remis au goût du jour, pour une nouvelle vie et une démarche responsable"
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731921925/La%20Lune%20Curieuse/Collection/tabourets/idris/double-bat_n3oxcg.png"
-          href="/collections/tabourets"
+          href="/categories/tabourets"
         />
         <Link
           heading="Sacs"
           subheading="Sac cabas sympa et solide upcyclé pour faire ses courses et bien d'autres encore"
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731922783/La%20Lune%20Curieuse/Collection/sacs/bangalore/bat_prod_galleryune_ejvrtb.jpg"
-          href="/collections/tabourets"
+          href="/categories/tabourets"
         />
       </div>
       {/** 

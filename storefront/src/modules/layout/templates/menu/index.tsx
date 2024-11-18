@@ -11,6 +11,7 @@ export default function HeaderMenu() {
 
   useEffect(() => {
     if (isActive) setIsActive(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
   return (

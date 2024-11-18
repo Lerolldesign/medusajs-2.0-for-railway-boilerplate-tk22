@@ -16,7 +16,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace(
-          "https://",
+          "backend-production-90ae.up.railway.app",
           ""
         ),
       },
@@ -47,6 +47,10 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "backend-production-90ae.up.railway.app",
       },
     ],
   },
