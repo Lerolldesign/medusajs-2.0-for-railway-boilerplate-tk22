@@ -140,13 +140,13 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-      <a
+      <Link
         className="flex gap-1 items-center align-center font-bold py-10 md:py-5"
         href="/entretien"
       >
         <TbWashTemperature2 className="size-5" />
         <span className="text-xs">Conseil d&apos;entretien</span>
-      </a>
+      </Link>
     </div>
   )
 }
