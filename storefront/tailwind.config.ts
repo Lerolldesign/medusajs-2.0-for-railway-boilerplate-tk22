@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["class", "class"],
   presets: [require("@medusajs/ui-preset")],
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
@@ -26,17 +26,17 @@ module.exports = {
         vanilla: "#fbfbfb",
         dark: "#111111",
         grey: {
-          0: "#FFFFFF",
-          5: "#F9FAFB",
-          10: "#F3F4F6",
-          20: "#E5E7EB",
-          30: "#D1D5DB",
-          40: "#9CA3AF",
-          50: "#6B7280",
-          60: "#4B5563",
-          70: "#374151",
-          80: "#1F2937",
-          90: "#111827",
+          "0": "#FFFFFF",
+          "5": "#F9FAFB",
+          "10": "#F3F4F6",
+          "20": "#E5E7EB",
+          "30": "#D1D5DB",
+          "40": "#9CA3AF",
+          "50": "#6B7280",
+          "60": "#4B5563",
+          "70": "#374151",
+          "80": "#1F2937",
+          "90": "#111827",
         },
       },
       borderRadius: {
@@ -78,8 +78,12 @@ module.exports = {
       },
       keyframes: {
         ring: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
         },
         "fade-in-right": {
           "0%": {
@@ -135,16 +139,48 @@ module.exports = {
           },
         },
         enter: {
-          "0%": { transform: "scale(0.9)", opacity: 0 },
-          "100%": { transform: "scale(1)", opacity: 1 },
+          "0%": {
+            transform: "scale(0.9)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
         },
         leave: {
-          "0%": { transform: "scale(1)", opacity: 1 },
-          "100%": { transform: "scale(0.9)", opacity: 0 },
+          "0%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(0.9)",
+            opacity: "0",
+          },
         },
         "slide-in": {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(0)" },
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
@@ -161,6 +197,8 @@ module.exports = {
         enter: "enter 200ms ease-out",
         "slide-in": "slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)",
         leave: "leave 150ms ease-in forwards",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

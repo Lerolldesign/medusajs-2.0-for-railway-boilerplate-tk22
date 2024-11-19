@@ -9,7 +9,7 @@ import Logo_brown from "../logoBrown"
 export default function HeaderNew() {
   return (
     <>
-      <header className="flex justify-between fixed z-50 w-full px-20 py-16">
+      <header className="flex justify-between fixed z-50 w-full px-10 py-10 md:px-20 md:py-16">
         <div>
           <Suspense>
             <Logo_brown />
@@ -18,7 +18,7 @@ export default function HeaderNew() {
         <div className="flex items-center justify-center gap-2 ">
           <Suspense>
             <LocalizedClientLink
-              className="hover:text-ui-fg-base text-white"
+              className="hover:text-ui-fg-base text-white hidden xl:block"
               href="/account"
               data-testid="nav-account-link"
             >
@@ -33,7 +33,7 @@ export default function HeaderNew() {
                 href="/cart"
                 data-testid="nav-cart-link"
               >
-                Article (0)
+                <span className="hidden md:block">Article </span> (0)
               </LocalizedClientLink>
             }
           >

@@ -73,7 +73,12 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
       <Popover className="relative h-full">
         <Popover.Button className="h-full">
           <LocalizedClientLink
-            className="hover:text-ui-fg-base !text-white bg-browny/60 p-2 rounded-full"
+            className="block md:hidden text-xs hover:text-ui-fg-base !text-white bg-browny/60 p-2 rounded-full"
+            href="/cart"
+            data-testid="nav-cart-link"
+          >{`Article (${totalItems})`}</LocalizedClientLink>
+          <LocalizedClientLink
+            className="hidden md:block hover:text-ui-fg-base !text-white bg-browny/60 p-2 rounded-full"
             href="/cart"
             data-testid="nav-cart-link"
           >{`Article (${totalItems})`}</LocalizedClientLink>
