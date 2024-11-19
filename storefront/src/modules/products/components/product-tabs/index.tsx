@@ -1,12 +1,12 @@
 "use client"
 
+import { HttpTypes } from "@medusajs/types"
 import Back from "@modules/common/icons/back"
 import FastDelivery from "@modules/common/icons/fast-delivery"
 import Refresh from "@modules/common/icons/refresh"
 import { Package, RefreshCw } from "lucide-react"
+import Link from "next/link"
 import { TbNeedleThread, TbWashTemperature2 } from "react-icons/tb"
-
-import { HttpTypes } from "@medusajs/types"
 //import Accordion from "./accordion"
 import {
   Accordion,
@@ -142,7 +142,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
       </Accordion>
       <Link
         className="flex gap-1 items-center align-center font-bold py-10 md:py-5"
-        href="/entretien"
+        href="/"
       >
         <TbWashTemperature2 className="size-5" />
         <span className="text-xs">Conseil d&apos;entretien</span>
