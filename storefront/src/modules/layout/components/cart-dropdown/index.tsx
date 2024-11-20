@@ -148,7 +148,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                                   data-testid="cart-item-quantity"
                                   data-value={item.quantity}
                                 >
-                                  Quantity: {item.quantity}
+                                  Quantité: {item.quantity}
                                 </span>
                               </div>
                               <div className="flex justify-end">
@@ -161,7 +161,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                             className="mt-1"
                             data-testid="cart-item-remove-button"
                           >
-                            Remove
+                            Retirer
                           </DeleteButton>
                         </div>
                       </div>
@@ -170,7 +170,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
-                      Subtotal{" "}
+                      SousTotal{" "}
                       <span className="font-normal">(excl. taxes)</span>
                     </span>
                     <span
@@ -185,7 +185,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button href={"*"}>Commander</Button>
+                    <Button href={"*"}>Voir le panier</Button>
                   </LocalizedClientLink>
                 </div>
               </>
@@ -206,7 +206,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                       </>
                     </LocalizedClientLink */}
 
-                    <span className="sr-only">Go to all products page</span>
+                    <span className="sr-only">Voir la boutique</span>
                     <Button href="/boutique" onClick={close}>
                       Voir les articles
                     </Button>
