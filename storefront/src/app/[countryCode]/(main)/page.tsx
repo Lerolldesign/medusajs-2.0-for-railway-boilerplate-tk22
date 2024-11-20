@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 import { Metadata } from "next"
 
 //import FeaturedProducts from "@modules/home/components/featured-products"
@@ -8,7 +10,11 @@ import HomeSectionEnjoliver from "@modules/home/components/sections/enjoliver"
 import HomeSectionIlluminer from "@modules/home/components/sections/illuminer"
 import HomeSectionIntroText from "@modules/home/components/sections/introText"
 import HomeSectionRestaurer from "@modules/home/components/sections/restaurer"
+import ReactCookieBot from "react-cookiebot"
+
 //import Hero from "@modules/home/components/hero"
+
+const domainGroupId = "a43e7b45-7c51-4756-b76e-92d2fade9466"
 
 export const metadata: Metadata = {
   title: "Tapisserie d’ameublement ▪ couture & décors",
@@ -30,6 +36,7 @@ export default async function Home({
 
   return (
     <>
+      <ReactCookieBot domainGroupId={domainGroupId} />
       <Banner />
       <HomeSectionIlluminer />
       <HomeSectionRestaurer />
