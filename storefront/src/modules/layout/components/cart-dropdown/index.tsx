@@ -170,8 +170,8 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
-                      SousTotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      Sous-total{" "}
+                      <span className="font-normal">(taxes incluses)</span>
                     </span>
                     <span
                       className="text-large-semi"
@@ -185,7 +185,9 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button href={"*"}>Voir le panier</Button>
+                    <div className="flex items-center justify-center">
+                      <Button href={"*"}>Voir le panier</Button>
+                    </div>
                   </LocalizedClientLink>
                 </div>
               </>
