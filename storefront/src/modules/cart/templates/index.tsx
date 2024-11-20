@@ -1,9 +1,9 @@
-import ItemsTemplate from "./items"
-import Summary from "./summary"
+import { HttpTypes } from "@medusajs/types"
+import Divider from "@modules/common/components/divider"
 import EmptyCartMessage from "../components/empty-cart-message"
 import SignInPrompt from "../components/sign-in-prompt"
-import Divider from "@modules/common/components/divider"
-import { HttpTypes } from "@medusajs/types"
+import ItemsTemplate from "./items"
+import Summary from "./summary"
 
 const CartTemplate = ({
   cart,
@@ -13,11 +13,11 @@ const CartTemplate = ({
   customer: HttpTypes.StoreCustomer | null
 }) => {
   return (
-    <div className="py-12">
+    <div className="py-32">
       <div className="content-container" data-testid="cart-container">
         {cart?.items?.length ? (
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
-            <div className="flex flex-col bg-white py-6 gap-y-6">
+            <div className="flex flex-col  py-6 gap-y-6">
               {!customer && (
                 <>
                   <SignInPrompt />
