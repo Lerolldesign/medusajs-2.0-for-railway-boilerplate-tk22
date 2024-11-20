@@ -10,10 +10,17 @@ import { cache } from "react"
 import { getAuthHeaders, removeAuthToken, setAuthToken } from "./cookies"
 
 export const getCustomer = cache(async function () {
-  return await sdk.store.customer
-    .retrieve({}, await { next: { tags: ["customer"] }, ...getAuthHeaders() })
-    .then(({ customer }: { customer: any }) => customer)
-    .catch(() => null)
+  try {
+    const { customer } = await sdk.store.customer.retrieve(
+      {},
+      await { next: { tags: ["customer"] }, ...getAuthHeaders() }
+    )
+    return customer || null
+  } catch (error) {
+    // Redirige vers la page de connexion si l'utilisateur n'est pas authentifié
+    redirect("/account")
+    return null // ou tu peux retourner une valeur par défaut, mais le redirect interrompt l'exécution du code
+  }
 })
 
 export const updateCustomer = cache(async function (
@@ -45,11 +52,7 @@ export async function signup(_currentState: unknown, formData: FormData) {
 
     const customHeaders = { authorization: `Bearer ${token}` }
 
-    const { customer: createdCustomer } = await sdk.store.customer.create(
-      customerForm,
-      {},
-      customHeaders
-    )
+    await sdk.store.customer.create(customerForm, {}, customHeaders)
 
     const loginToken = await sdk.auth.login("customer", "emailpass", {
       email: customerForm.email,
@@ -61,9 +64,11 @@ export async function signup(_currentState: unknown, formData: FormData) {
     )
 
     revalidateTag("customer")
-    return createdCustomer
+
+    // Retourne l'URL de redirection
+    return { success: true, redirectUrl: "/account" }
   } catch (error: any) {
-    return error.toString()
+    return { success: false, error: error.toString() }
   }
 }
 

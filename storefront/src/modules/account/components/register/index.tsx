@@ -1,6 +1,6 @@
 "use client"
 
-import { useFormState } from "react-dom"
+import { useActionState, useEffect } from "react"
 
 import { signup } from "@lib/data/customer"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
@@ -14,7 +14,14 @@ type Props = {
 }
 
 const Register = ({ setCurrentView }: Props) => {
-  const [message, formAction] = useFormState(signup, null)
+  const [message, formAction] = useActionState(signup, null)
+
+  // Si l'inscription réussit, rediriger l'utilisateur
+  useEffect(() => {
+    if (message && typeof message !== "string" && message.redirectUrl) {
+      window.location.href = message.redirectUrl // Redirige l'utilisateur vers /account
+    }
+  }, [message]) // Déclenche cette logique à chaque changement de message
 
   return (
     <div
@@ -77,7 +84,14 @@ const Register = ({ setCurrentView }: Props) => {
             data-testid="password-input"
           />
         </div>
-        <ErrorMessage error={message} data-testid="register-error" />
+        <ErrorMessage
+          error={
+            typeof message === "string"
+              ? message
+              : "An unexpected error occurred"
+          }
+          data-testid="register-error"
+        />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
           Pour créer un compte vous devez accepter nos
           <LocalizedClientLink
@@ -97,7 +111,7 @@ const Register = ({ setCurrentView }: Props) => {
         </span>
         <div className=" mt-6 items-center flex justify-center">
           <SubmitButton className="w-full mt-6" data-testid="register-button">
-            Regoignez-nous
+            Rejoignez-nous
           </SubmitButton>
         </div>
       </form>
