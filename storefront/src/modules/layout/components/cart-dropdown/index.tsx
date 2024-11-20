@@ -96,7 +96,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+6px)] right-0 bg-creamy/80 noise border-x border-b  w-[420px] text-ui-fg-base border-2  border-lune rounded-[3vw]"
+            className="hidden small:block absolute top-[calc(100%+6px)] right-0 bg-creamy noise border-x border-b  w-[420px] text-ui-fg-base border-2  border-lune rounded-[3vw]"
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
@@ -185,7 +185,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <button className="w-full">Go to cart</button>
+                    <Button href={"*"}>Commander</Button>
                   </LocalizedClientLink>
                 </div>
               </>

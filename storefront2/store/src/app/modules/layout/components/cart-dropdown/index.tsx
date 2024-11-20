@@ -82,7 +82,7 @@ const CartDropdown = ({
             className="hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
-          >{`Cart (${totalItems})`}</LocalizedClientLink>
+          >{`Panier (${totalItems})`}</LocalizedClientLink>
         </Popover.Button>
         <Transition
           show={cartDropdownOpen}
@@ -148,7 +148,7 @@ const CartDropdown = ({
                                   data-testid="cart-item-quantity"
                                   data-value={item.quantity}
                                 >
-                                  Quantity: {item.quantity}
+                                  Quantité: {item.quantity}
                                 </span>
                               </div>
                               <div className="flex justify-end">
@@ -161,7 +161,7 @@ const CartDropdown = ({
                             className="mt-1"
                             data-testid="cart-item-remove-button"
                           >
-                            Remove
+                            Retirer
                           </DeleteButton>
                         </div>
                       </div>
@@ -170,8 +170,8 @@ const CartDropdown = ({
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
-                      Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      Sous Total{" "}
+                      <span className="font-normal">(Livraison incluse)</span>
                     </span>
                     <span
                       className="text-large-semi"
@@ -186,7 +186,7 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <button className="w-full" data-testid="go-to-cart-button">
-                      Go to cart
+                      Voir mon panier
                     </button>
                   </LocalizedClientLink>
                 </div>
@@ -201,9 +201,8 @@ const CartDropdown = ({
                   <div>
                     <LocalizedClientLink href="/boutique">
                       <>
-                        <span className="sr-only">Go to all products page</span>
-                        <button onClick={close}>Explore products</button>
-                     
+                        <span className="sr-only">Voir la boutique</span>
+                        <button onClick={close}>Voir tous les produits</button>
                       </>
                     </LocalizedClientLink>
                   </div>
