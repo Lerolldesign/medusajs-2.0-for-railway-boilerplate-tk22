@@ -40,7 +40,10 @@ const Summary = ({ cart }: SummaryProps) => {
         href={"/checkout?step=" + step}
         data-testid="checkout-button"
       >
-        <Button href={"*"}>Commander</Button>
+        <div className="flex items-center justify-center w-full">
+          {" "}
+          <Button href={"*"}>Commander</Button>
+        </div>
       </LocalizedClientLink>
     </div>
   )
