@@ -36,7 +36,6 @@ export default async function Home({
 
   return (
     <>
-      <ReactCookieBot domainGroupId={domainGroupId} />
       <Banner />
       <HomeSectionIlluminer />
       <HomeSectionRestaurer />
