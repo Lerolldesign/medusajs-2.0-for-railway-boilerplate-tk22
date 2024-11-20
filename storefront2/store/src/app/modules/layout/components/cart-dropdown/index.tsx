@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
 
 import { HttpTypes } from "@medusajs/types";
+
 import { convertToLocale } from "../../../../../lib/util/money";
 import DeleteButton from "../../../common/components/delete-button";
 import LineItemOptions from "../../../common/components/line-item-options";
@@ -196,12 +197,13 @@ const CartDropdown = ({
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
                     <span>0</span>
                   </div>
-                  <span>Your shopping bag is empty.</span>
+                  <span>Votre panier est vide</span>
                   <div>
-                    <LocalizedClientLink href="/store">
+                    <LocalizedClientLink href="/boutique">
                       <>
                         <span className="sr-only">Go to all products page</span>
                         <button onClick={close}>Explore products</button>
+                     
                       </>
                     </LocalizedClientLink>
                   </div>

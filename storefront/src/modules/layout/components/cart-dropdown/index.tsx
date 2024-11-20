@@ -1,7 +1,8 @@
 "use client"
 
 import { Popover, Transition } from "@headlessui/react"
-import { Button } from "@medusajs/ui"
+//import { Button } from "@medusajs/ui"
+import Button from "@modules/elements/button"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 
@@ -95,11 +96,11 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[420px] text-ui-fg-base"
+            className="hidden small:block absolute top-[calc(100%+6px)] right-0 bg-creamy/80 noise border-x border-b  w-[420px] text-ui-fg-base border-2  border-lune rounded-[3vw]"
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Cart</h3>
+              <h3 className="text-4xl font-lune text-lune mt-4">Panier</h3>
             </div>
             {cartState && cartState.items?.length ? (
               <>
@@ -184,13 +185,7 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button
-                      className="w-full"
-                      size="large"
-                      data-testid="go-to-cart-button"
-                    >
-                      Go to cart
-                    </Button>
+                    <button className="w-full">Go to cart</button>
                   </LocalizedClientLink>
                 </div>
               </>
@@ -200,14 +195,21 @@ const CartDropdown = ({ cart: cartState }: { cart?: any | null }) => {
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
                     <span>0</span>
                   </div>
-                  <span>Your shopping bag is empty.</span>
+                  <span>Votre panier est vide.</span>
                   <div>
-                    <LocalizedClientLink href="/store">
+                    {/**        <LocalizedClientLink href="/boutique">
                       <>
                         <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
+                        <Button href="/boutique" onClick={close}>
+                          Explore products
+                        </Button>
                       </>
-                    </LocalizedClientLink>
+                    </LocalizedClientLink */}
+
+                    <span className="sr-only">Go to all products page</span>
+                    <Button href="/boutique" onClick={close}>
+                      Voir les articles
+                    </Button>
                   </div>
                 </div>
               </div>

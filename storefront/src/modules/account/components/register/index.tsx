@@ -2,12 +2,12 @@
 
 import { useFormState } from "react-dom"
 
-import Input from "@modules/common/components/input"
+import { signup } from "@lib/data/customer"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
+import Input from "@modules/common/components/input"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { signup } from "@lib/data/customer"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
@@ -21,29 +21,45 @@ const Register = ({ setCurrentView }: Props) => {
       className="max-w-sm flex flex-col items-center"
       data-testid="register-page"
     >
-      <h1 className="text-large-semi uppercase mb-6">
-        Become a Medusa Store Member
+      <h1
+        className="text-large-semi uppercase mb-6
+      text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider  !font-lune text-lune"
+      >
+        Devenez membre
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        Create your Medusa Store Member profile, and get access to an enhanced
-        shopping experience.
+        La création d&apos;un compte permet de retrouvez facilement vos
+        commandes et suivre les étapes de créations ou de restaurations de vos
+        produits sur mesures.
       </p>
       <form className="w-full flex flex-col" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
-          <Input
-            label="First name"
-            name="first_name"
-            required
-            autoComplete="given-name"
-            data-testid="first-name-input"
-          />
-          <Input
-            label="Last name"
-            name="last_name"
-            required
-            autoComplete="family-name"
-            data-testid="last-name-input"
-          />
+          <div className="flex gap-3">
+            {" "}
+            <Input
+              label="Prénom"
+              name="first_name"
+              required
+              autoComplete="given-name"
+              data-testid="first-name-input"
+            />
+            <Input
+              label="Nom"
+              name="last_name"
+              required
+              autoComplete="family-name"
+              data-testid="last-name-input"
+            />
+          </div>
+
+          {/**     <Input
+            label="Mobile"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            data-testid="phone-input"
+          /> */}
+
           <Input
             label="Email"
             name="email"
@@ -53,14 +69,7 @@ const Register = ({ setCurrentView }: Props) => {
             data-testid="email-input"
           />
           <Input
-            label="Phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            data-testid="phone-input"
-          />
-          <Input
-            label="Password"
+            label="Mot de passe"
             name="password"
             required
             type="password"
@@ -70,33 +79,35 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          By creating an account, you agree to Medusa Store&apos;s{" "}
+          Pour créer un compte vous devez accepter nos
           <LocalizedClientLink
-            href="/content/privacy-policy"
-            className="underline"
+            href="/documents/mentions-legales"
+            className="text-lune font-semibold pl-1"
           >
-            Privacy Policy
+            Mentions Légales
           </LocalizedClientLink>{" "}
-          and{" "}
+          et{" "}
           <LocalizedClientLink
-            href="/content/terms-of-use"
-            className="underline"
+            href="/documents/cgu"
+            className="text-lune font-semibold"
           >
-            Terms of Use
+            Conditions d&apos;utilisation
           </LocalizedClientLink>
           .
         </span>
-        <SubmitButton className="w-full mt-6" data-testid="register-button">
-          Join
-        </SubmitButton>
+        <div className=" mt-6 items-center flex justify-center">
+          <SubmitButton className="w-full mt-6" data-testid="register-button">
+            Regoignez-nous
+          </SubmitButton>
+        </div>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
-        Already a member?{" "}
+        Vous êtes déjà membre ?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
-          className="underline"
+          className="underline font-semibold uppercase"
         >
-          Sign in
+          Connectez-vous
         </button>
         .
       </span>

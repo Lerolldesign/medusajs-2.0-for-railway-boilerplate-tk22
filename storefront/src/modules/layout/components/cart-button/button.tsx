@@ -5,15 +5,13 @@ type ButtonProps = {
   children: React.ReactNode
   variant?: "primary" | "secondary"
   target?: string
-  onClick?: () => void // Add onClick property
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ButtonEffect: React.FC<ButtonProps> = ({
   href,
   children,
   variant = "primary",
   target = "_self",
-  onClick,
 }) => {
   const getClassNames = () => {
     let baseClass =
@@ -25,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
       baseClass += " border-lune"
       spanClass += " text-white bg-lune ring-lune ring-offset-lune"
     } else if (variant === "secondary") {
-      baseClass += " border-lune"
+      baseClass += " border-lune "
       spanClass += " text-creamy bg-lune/5 hover:bg-lune ring-lune"
     }
 
@@ -35,15 +33,10 @@ const Button: React.FC<ButtonProps> = ({
   const { baseClass, spanClass } = getClassNames()
 
   return (
-    <a
-      className={baseClass}
-      href={href}
-      target={target}
-      onClick={onClick} // Attach onClick event
-    >
+    <a className={baseClass} href={href} target={target}>
       <span className={spanClass}>{children}</span>
     </a>
   )
 }
 
-export default Button
+export default ButtonEffect
