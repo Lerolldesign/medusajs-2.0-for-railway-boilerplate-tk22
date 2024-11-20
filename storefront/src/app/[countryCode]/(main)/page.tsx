@@ -5,16 +5,17 @@ import { Metadata } from "next"
 //import FeaturedProducts from "@modules/home/components/featured-products"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import CookieBot from "@modules/elements/cookiebot"
 import Banner from "@modules/home/components/hero/banner"
 import HomeSectionEnjoliver from "@modules/home/components/sections/enjoliver"
 import HomeSectionIlluminer from "@modules/home/components/sections/illuminer"
 import HomeSectionIntroText from "@modules/home/components/sections/introText"
 import HomeSectionRestaurer from "@modules/home/components/sections/restaurer"
-import ReactCookieBot from "react-cookiebot"
+//import CookieBot from "react-cookiebot"
 
 //import Hero from "@modules/home/components/hero"
 
-const domainGroupId = "a43e7b45-7c51-4756-b76e-92d2fade9466"
+//const domainGroupId = "a43e7b45-7c51-4756-b76e-92d2fade9466"
 
 export const metadata: Metadata = {
   title: "Tapisserie d’ameublement ▪ couture & décors",
@@ -42,10 +43,12 @@ export default async function Home({
       <HomeSectionEnjoliver />
       <HomeSectionIntroText />
       {/**      <div className="py-12">
+       * <CookieBot domainGroupId={domainGroupId} />
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
-      </div> */}
+      </div>  <CookieBot />*/}
+      <CookieBot />
     </>
   )
 }
