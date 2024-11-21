@@ -136,3 +136,9 @@
   color: #c87e53 !important;
   font-weight: 600;
 }
+.border-ui-border-interactive {
+  color: #c87e53 !important;
+}
+.shadow-borders-interactive-with-active {
+  color: #c2c2c2 !important;
+}
