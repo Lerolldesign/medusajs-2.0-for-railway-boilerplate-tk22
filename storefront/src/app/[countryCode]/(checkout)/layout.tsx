@@ -1,6 +1,7 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import LogoBrown from "@modules/layout/templates/logoBrown"
 
 export default function CheckoutLayout({
   children,
@@ -29,7 +30,13 @@ export default function CheckoutLayout({
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             data-testid="store-link"
           >
-            La Lune Curieuse
+            <span className="flex gap-2">
+              {" "}
+              <LogoBrown />{" "}
+              <span className="text-2xl font-lune text-lune">
+                La Lune Curieuse
+              </span>
+            </span>
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>

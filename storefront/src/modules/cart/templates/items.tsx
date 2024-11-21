@@ -13,7 +13,7 @@ const ItemsTemplate = ({ items }: ItemsTemplateProps) => {
   return (
     <div>
       <div className="pb-3 flex items-center ">
-        <Heading className="text-[4rem] leading-[2.75rem] font-lune text-lune">
+        <Heading className="text-[2rem] md:text-[4rem] leading-[2.75rem] font-lune text-lune">
           Panier
         </Heading>
       </div>

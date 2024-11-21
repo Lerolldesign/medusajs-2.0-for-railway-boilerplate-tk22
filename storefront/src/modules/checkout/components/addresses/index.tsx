@@ -46,9 +46,9 @@ const Addresses = ({
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
-          className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
+          className="flex flex-row text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune"
         >
-          Shipping Address
+          Adresse de livraison
           {!isOpen && <CheckCircleSolid />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
@@ -58,7 +58,7 @@ const Addresses = ({
               className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               data-testid="edit-address-button"
             >
-              Edit
+              Éditer
             </button>
           </Text>
         )}
