@@ -29,7 +29,7 @@ const Summary = ({ cart }: SummaryProps) => {
   const step = getCheckoutStep(cart)
 
   return (
-    <div className="flex flex-col gap-y-4 bg-creamy/20 rounded-lg">
+    <div className="flex flex-col gap-y-4 bg-white/30 rounded-[2vw] p-3 w-[75vw] md:w-[20vw]">
       <Heading level="h2" className="text-[2rem] leading-[2.75rem]">
         Résumé
       </Heading>
