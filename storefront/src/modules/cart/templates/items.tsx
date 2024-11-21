@@ -17,7 +17,7 @@ const ItemsTemplate = ({ items }: ItemsTemplateProps) => {
           Panier
         </Heading>
       </div>
-      <Table className="!bg-red-600">
+      <Table>
         <Table.Header className="border-t-0">
           <Table.Row className="text-ui-fg-subtle txt-medium-plus">
             <Table.HeaderCell className="!pl-0 font-bold">

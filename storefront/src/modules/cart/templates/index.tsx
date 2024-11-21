@@ -17,14 +17,16 @@ const CartTemplate = ({
       <div className="content-container" data-testid="cart-container">
         {cart?.items?.length ? (
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
-            <div className="flex flex-col  py-6 gap-y-6">
+            <div className="flex flex-col  py-6 gap-y-6 bg-green-400">
               {!customer && (
                 <>
                   <SignInPrompt />
                   <Divider />
                 </>
               )}
-              <ItemsTemplate items={cart?.items} />
+              <div className="bg-green-400">
+                <ItemsTemplate items={cart?.items} />
+              </div>
             </div>
             <div className="relative">
               <div className="flex flex-col gap-y-8 sticky top-12">
