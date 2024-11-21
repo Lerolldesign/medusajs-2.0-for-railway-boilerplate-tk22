@@ -132,3 +132,7 @@
   /* background-color: var(--bg-base); */
   background-color: transparent !important;
 }
+.text-ui-fg-interactive {
+  color: #c87e53 !important;
+  font-weight: 600;
+}
