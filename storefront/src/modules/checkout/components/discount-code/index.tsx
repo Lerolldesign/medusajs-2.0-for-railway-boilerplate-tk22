@@ -75,7 +75,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
             <>
               <div className="flex w-full gap-x-2 items-center">
                 <Input
-                  className="size-full  py-2 pt-4 pb-1 block w-full h-11 px-4 mt-0 bg-ui-bg-field border border-lune rounded-full bg-creamy noise appearance-none focus:outline-none focus:ring-0 focus:ring-lune hover:bg-ui-bg-field-hover"
+                  className="size-full  py-2  pb-1 block w-full h-11 px-4 mt-0 bg-ui-bg-field border border-lune rounded-full bg-creamy noise appearance-none focus:outline-none focus:ring-0 focus:ring-lune hover:bg-ui-bg-field-hover"
                   id="promotion-input"
                   name="code"
                   type="text"
