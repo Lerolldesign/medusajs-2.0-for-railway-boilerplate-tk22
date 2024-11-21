@@ -10,11 +10,11 @@ import Spinner from "@modules/common/icons/spinner"
 import { setAddresses } from "@lib/data/cart"
 import compareAddresses from "@lib/util/compare-addresses"
 import { HttpTypes } from "@medusajs/types"
+import Button from "@modules/elements/button"
 import { useFormState } from "react-dom"
 import BillingAddress from "../billing_address"
 import ErrorMessage from "../error-message"
 import ShippingAddress from "../shipping-address"
-import { SubmitButton } from "../submit-button"
 
 const Addresses = ({
   cart,
@@ -42,7 +42,7 @@ const Addresses = ({
   const [message, formAction] = useFormState(setAddresses, null)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white/0">
       <div className="flex flex-row items-center justify-between mb-6">
         <Heading
           level="h2"
@@ -77,17 +77,21 @@ const Addresses = ({
               <div>
                 <Heading
                   level="h2"
-                  className="text-3xl-regular gap-x-4 pb-6 pt-8"
+                  className=" pb-6 pt-8 text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune"
                 >
-                  Billing address
+                  Adresse de facturation
                 </Heading>
 
                 <BillingAddress cart={cart} />
               </div>
             )}
-            <SubmitButton className="mt-6" data-testid="submit-address-button">
-              Continue to delivery
-            </SubmitButton>
+            <div>
+              {" "}
+              <Button href={"*"} data-testid="submit-address-button">
+                Continuer
+              </Button>
+            </div>
+
             <ErrorMessage error={message} data-testid="address-error-message" />
           </div>
         </form>
@@ -101,7 +105,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="shipping-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
                       Adresse de livraison
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -125,7 +129,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3 "
                     data-testid="shipping-contact-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
                       Contact
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -140,13 +144,14 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="billing-address-summary"
                   >
-                    <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Billing Address
+                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
+                      Adresse de facturation
                     </Text>
 
                     {sameAsBilling ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        Billing- and delivery address are the same.
+                        L&apos;adresse de facturation et la même que
+                        l&apos;adresse de livraison
                       </Text>
                     ) : (
                       <>

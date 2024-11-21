@@ -30,13 +30,14 @@ export default function CheckoutLayout({
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             data-testid="store-link"
           >
-            <span className="flex gap-2">
-              {" "}
-              <LogoBrown />{" "}
-              <span className="text-2xl font-lune text-lune">
+            <div className="flex gap-2 item-center align-middle">
+              <span className="w-1/2 h-auto">
+                <LogoBrown />
+              </span>
+              <span className="text-xl md:text-2xl font-lune text-lune">
                 La Lune Curieuse
               </span>
-            </span>
+            </div>
           </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>
