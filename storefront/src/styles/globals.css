@@ -128,3 +128,7 @@
     right: 30px !important;
   }
 }
+.bg-ui-bg-base {
+  /* background-color: var(--bg-base); */
+  background-color: black !important;
+}
