@@ -10,11 +10,11 @@ import Spinner from "@modules/common/icons/spinner"
 import { setAddresses } from "@lib/data/cart"
 import compareAddresses from "@lib/util/compare-addresses"
 import { HttpTypes } from "@medusajs/types"
-import Button2 from "@modules/elements/button2"
 import { useFormState } from "react-dom"
 import BillingAddress from "../billing_address"
 import ErrorMessage from "../error-message"
 import ShippingAddress from "../shipping-address"
+import { SubmitButton } from "../submit-button"
 
 const Addresses = ({
   cart,
@@ -87,7 +87,12 @@ const Addresses = ({
             )}
             <div>
               {" "}
-              <Button2 data-testid="submit-address-button">Continuer</Button2>
+              <SubmitButton
+                className="mt-6"
+                data-testid="submit-address-button"
+              >
+                Continue to delivery
+              </SubmitButton>
             </div>
 
             <ErrorMessage error={message} data-testid="address-error-message" />
