@@ -108,7 +108,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="shipping-address-summary"
                   >
-                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
+                    <Text className="pb-6 pt-8 text-[.9rem] font-bold">
                       Adresse de livraison
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -132,7 +132,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3 "
                     data-testid="shipping-contact-summary"
                   >
-                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
+                    <Text className="pb-6 pt-8 text-[.9rem] font-bold">
                       Contact
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
@@ -147,7 +147,7 @@ const Addresses = ({
                     className="flex flex-col w-1/3"
                     data-testid="billing-address-summary"
                   >
-                    <Text className=" text-[6vw] md:text-[4vw] xl:text-[1.8vw] font-semibold tracking-wider gap-x-4 md:gap-x-2  uppercase !font-lune text-lune mb-1">
+                    <Text className="pb-6 pt-8 text-[.9rem] font-bold">
                       Adresse de facturation
                     </Text>
 
