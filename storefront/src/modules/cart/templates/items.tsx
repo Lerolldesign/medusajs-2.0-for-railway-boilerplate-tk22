@@ -33,7 +33,7 @@ const ItemsTemplate = ({ items }: ItemsTemplateProps) => {
             </Table.HeaderCell>
           </Table.Row>
         </Table.Header>
-        <Table.Body>
+        <Table.Body className="!bg-blue-300">
           {items
             ? items
                 .sort((a, b) => {
