@@ -10,7 +10,7 @@ import Spinner from "@modules/common/icons/spinner"
 import { setAddresses } from "@lib/data/cart"
 import compareAddresses from "@lib/util/compare-addresses"
 import { HttpTypes } from "@medusajs/types"
-import Button from "@modules/elements/button"
+import Button2 from "@modules/elements/button2"
 import { useFormState } from "react-dom"
 import BillingAddress from "../billing_address"
 import ErrorMessage from "../error-message"
@@ -87,9 +87,7 @@ const Addresses = ({
             )}
             <div>
               {" "}
-              <Button href={"*"} data-testid="submit-address-button">
-                Continuer
-              </Button>
+              <Button2 data-testid="submit-address-button">Continuer</Button2>
             </div>
 
             <ErrorMessage error={message} data-testid="address-error-message" />
