@@ -85,7 +85,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 <SubmitButton
                   variant="secondary"
                   data-testid="discount-apply-button"
-                  className="rounded-full bg-browny text-creamy border-browny border "
+                  className="rounded-full bg-browny text-creamy border-browny border hover:bg-creamy hover:text-lune "
                 >
                   Appliquer
                 </SubmitButton>
@@ -103,7 +103,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
               <Heading className="txt-medium mb-2">
-                Promotion(s) applied:
+                Promotion(s) appliquée:
               </Heading>
 
               {promotions.map((promotion) => {
@@ -158,9 +158,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                         data-testid="remove-discount-button"
                       >
                         <Trash size={14} />
-                        <span className="sr-only">
-                          Remove discount code from order
-                        </span>
+                        <span className="sr-only">Retirer le code</span>
                       </button>
                     )}
                   </div>
