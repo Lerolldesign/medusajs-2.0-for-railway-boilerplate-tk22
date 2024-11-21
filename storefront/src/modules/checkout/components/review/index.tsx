@@ -1,6 +1,7 @@
 "use client"
 
 import { Heading, Text, clx } from "@medusajs/ui"
+import Link from "next/link"
 
 import { useSearchParams } from "next/navigation"
 import PaymentButton from "../payment-button"
@@ -39,9 +40,9 @@ const Review = ({ cart }: { cart: any }) => {
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 En cliquant sur le bouton Passer la commande, vous confirmez que
-                vous avez lu, compris et accepté nos Conditions
-                d&apos;utilisation, Conditions de vente et Politique de retour
-                de La Lune Curieuse.
+                vous avez lu, compris et accepté nos Conditions de vente et
+                Politique de retour de La Lune Curieuse.{" "}
+                <Link href="/documents/cgv">lire +</Link>
               </Text>
             </div>
           </div>

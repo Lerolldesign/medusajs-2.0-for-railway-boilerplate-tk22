@@ -94,7 +94,7 @@ const Shipping: React.FC<ShippingProps> = ({
       </div>
       {isOpen ? (
         <div data-testid="delivery-options-container">
-          <div className="pb-8 bg-creamy/30 rounded-full">
+          <div className="pb-8 bg-creamy/30">
             <RadioGroup value={selectedShippingMethod?.id} onChange={set}>
               {availableShippingMethods?.map((option) => {
                 return (
