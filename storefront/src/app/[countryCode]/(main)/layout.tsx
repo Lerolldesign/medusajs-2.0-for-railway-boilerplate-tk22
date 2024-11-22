@@ -1,9 +1,10 @@
 import { Metadata } from "next"
 
-import Footer from "@modules/layout/templates/footer"
+//import Footer from "@modules/layout/templates/footer"
 //import Nav from "@modules/layout/templates/nav"
 import { getBaseURL } from "@lib/util/env"
 import Tidio from "@modules/elements/tidio"
+import FooterLune from "@modules/layout/templates/footerLune"
 import HeaderNew from "@modules/layout/templates/headernew"
 import Ornements from "@modules/layout/templates/ornements"
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
@@ -22,7 +23,9 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
       <HeaderNew />
 
       {props.children}
-      <Footer />
+      {/**      <Footer />*/}
+
+      <FooterLune />
       <Tidio />
     </>
   )
