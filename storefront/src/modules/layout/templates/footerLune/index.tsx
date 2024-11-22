@@ -69,16 +69,16 @@ const FooterLune = () => {
         <div
           className=" absolute z-50 text-browny top-[23%] w-full h-[10vh]"
           style={{
-            left: "33%",
+            left: "40%",
             transform: "translate(-50%, -50%)", // Centrage exact du bouton
           }}
         >
           <div className="flex justify-center w-full py-10">
-            <div className="relative left-3">
+            <div className="relative left-5">
               <p className="txt-compact-small">
                 © {new Date().getFullYear()} La Lune Curieuse. Tous droits
                 réservés.{" "}
-                <span className="relative left-5 ml-32 font-bold">
+                <span className="relative left-5 font-bold">
                   crafted /// Leroll D+sign<sup className="size-2">©</sup>
                 </span>
               </p>
