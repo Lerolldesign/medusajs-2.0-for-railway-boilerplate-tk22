@@ -38,6 +38,21 @@ export default async function orderPlacedHandler({
         preview: "Merci pour votre commande!",
       },
     });
+    // Envoi de l'email de confirmation à l'administrateur
+    await notificationModuleService.createNotifications({
+      to: "commande@lalunecurieuse.com", // L'email de l'administrateur
+      channel: "email",
+      template: EmailTemplates.ORDER_PLACED, // Vous pouvez utiliser un autre template si nécessaire
+      data: {
+        emailOptions: {
+          replyTo: "commande@lalunecurieuse.com",
+          subject: `Nouvelle commande reçue: ${order.id}`,
+        },
+        order,
+        shippingAddress,
+        preview: `Nouvelle commande ${order.id} a été placée.`,
+      },
+    });
   } catch (error) {
     console.error("Error sending order confirmation notification:", error);
   }
