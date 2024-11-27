@@ -41,7 +41,7 @@ const FooterLune = () => {
   return (
     <footer
       id="footer"
-      className="relative overflow-hidden h-[50vh] md:h-[90vh] py-48 bg-[#111111] noise text-white text-center"
+      className="relative overflow-hidden h-[50vh] md:h-[90vh] py-48   text-white text-center"
     >
       <div
         id="circle"
@@ -69,7 +69,7 @@ const FooterLune = () => {
         <div
           className=" absolute z-50 text-browny top-[23%] w-full h-[10vh]"
           style={{
-            left: "40%",
+            left: "34%",
             transform: "translate(-50%, -50%)", // Centrage exact du bouton
           }}
         >

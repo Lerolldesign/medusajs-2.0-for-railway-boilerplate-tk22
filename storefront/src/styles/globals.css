@@ -142,3 +142,6 @@
 .shadow-borders-interactive-with-active {
   color: #c2c2c2 !important;
 }
+#CookiebotWidget {
+  display: none !important;
+}
