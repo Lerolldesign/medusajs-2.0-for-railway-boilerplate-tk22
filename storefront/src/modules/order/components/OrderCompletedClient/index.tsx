@@ -25,12 +25,14 @@ export default function OrderCompletedClient({
     setMessage("")
 
     try {
-      const response = await axios.post("../../../../api/sendAdminMessage", {
-        orderId: order.id,
+      // Effectuer une requête POST vers /api/sendAdminMessage avec les bons paramètres
+      const response = await axios.post("/api/sendAdminMessage", {
+        email: order.user?.email, // Assurez-vous que l'email de l'utilisateur est dans la commande
+        userFirstname: order.user?.firstName, // Assurez-vous que le prénom de l'utilisateur est dans la commande
       })
       setMessage(response.data.message)
     } catch (error) {
-      setMessage("Échec de l'envoi du message à l'administrateur")
+      setMessage("Échec de l'envoi du message")
     } finally {
       setIsLoading(false)
     }

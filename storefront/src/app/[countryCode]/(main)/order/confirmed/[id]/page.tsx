@@ -34,7 +34,6 @@ export default async function OrderConfirmedPage({ params }: Props) {
   if (!order) {
     return notFound()
   }
-  // Envoyer l'email lors de la récupération de la commande
 
   return <OrderCompletedTemplate order={order} />
 }

@@ -35,7 +35,6 @@ export const OrderPlacedTemplate: React.FC<OrderPlacedTemplateProps> & {
       {/* Header */}
       <Section
         style={{
-          backgroundColor: "#333",
           padding: "20px",
           textAlign: "center",
           color: "#fff",
@@ -59,6 +58,7 @@ export const OrderPlacedTemplate: React.FC<OrderPlacedTemplateProps> & {
             fontWeight: "bold",
             textAlign: "center",
             margin: "0 0 30px",
+            padding: "0 0 20px",
           }}
         >
           Confirmation de commmande
