@@ -64,13 +64,16 @@ export default function OrderCompletedClient({
       <CartTotals totals={order} />
       <ShippingDetails order={order} />
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-lune hover:bg-browny focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-creamy disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
-      </button>
+      <form onSubmit={handleSubmit} ref={formRef}>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-lune hover:bg-browny focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-creamy disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? "Envoi en cours..." : "Confirmer les infos"}
+        </button>
+      </form>
+
       {message && (
         <div
           className={`mt-4 p-2 rounded ${
