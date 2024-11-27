@@ -25,7 +25,7 @@ export default function OrderCompletedClient({
     setMessage("")
 
     try {
-      const response = await axios.post("/api/sendAdminMessage", {
+      const response = await axios.post("../../../../api/sendAdminMessage", {
         orderId: order.id,
       })
       setMessage(response.data.message)
