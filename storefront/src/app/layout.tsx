@@ -8,7 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-})    Y
+})
 
 const lune = localFont({
   src: "../fonts/charlotte.ttf",
