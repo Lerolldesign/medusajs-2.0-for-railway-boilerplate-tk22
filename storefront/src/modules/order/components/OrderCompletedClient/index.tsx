@@ -27,16 +27,24 @@ export default function OrderCompletedClient({
     setIsSubmitting(true)
     setMessage("")
 
-    const formData = new FormData(event.currentTarget)
-    const result = await sendConfirmation(formData)
+    // Vérifiez si formRef.current est valide avant de créer FormData
+    if (formRef.current) {
+      const formData = new FormData(formRef.current) // Créer le FormData si formRef.current est défini
+      const result = await sendConfirmation(formData)
 
-    setIsSubmitting(false)
+      setIsSubmitting(false)
 
-    if (result.success) {
-      setMessage(result.message)
-      formRef.current?.reset()
+      if (result.success) {
+        setMessage(result.message)
+        formRef.current?.reset()
+      } else {
+        setMessage(result.message)
+      }
     } else {
-      setMessage(result.message)
+      // Si formRef.current est null, vous pouvez gérer cette situation ici.
+      console.error("Le formulaire n'a pas été trouvé")
+      setIsSubmitting(false)
+      setMessage("Erreur lors de l'envoi des données du formulaire")
     }
   }
 
@@ -70,7 +78,7 @@ export default function OrderCompletedClient({
           disabled={isSubmitting}
           className="w-full py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-lune hover:bg-browny focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-creamy disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? "Envoi en cours..." : "Confirmer les infos"}
+          {isSubmitting ? "Envoi en cours..." : "Confirmer les informations"}
         </button>
       </form>
 
