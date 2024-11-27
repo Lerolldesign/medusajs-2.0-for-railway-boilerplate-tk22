@@ -88,10 +88,10 @@ const Addresses = ({
             <div>
               {" "}
               <SubmitButton
-                className="mt-6"
+                className="mt-6 rounded-full"
                 data-testid="submit-address-button"
               >
-                Continue to delivery
+                Continuer
               </SubmitButton>
             </div>
 

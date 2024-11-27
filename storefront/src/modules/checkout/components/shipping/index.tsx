@@ -135,13 +135,13 @@ const Shipping: React.FC<ShippingProps> = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 rounded-full"
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={!cart.shipping_methods?.[0]}
             data-testid="submit-delivery-option-button"
           >
-            Continue to payment
+            Continuer
           </Button>
         </div>
       ) : (
