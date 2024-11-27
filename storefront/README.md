@@ -8,5 +8,4 @@ test page produit template
 
 https://kmeet.infomaniak.com/ixihnlrpgspeuiem
 a43e7b45-7c51-4756-b76e-92d2fade9466
-test-checkout
-semi colon
+test-checkouk

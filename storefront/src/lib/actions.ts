@@ -23,7 +23,7 @@ export async function sendEmail(formData: FormData) {
 
   try {
     const data = await resend.emails.send({
-      from: "La Lune Curieuse <confirmation@lalunecurieuse.com>",
+      from: "La Lune Curieuse <confirmation@atelier.lalunecurieuse.com>",
       to: ["contact@lalunecurieuse.com"],
       subject: `Nouveau message de ${name} - Service: ${service}`,
       text: `Nom: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`,

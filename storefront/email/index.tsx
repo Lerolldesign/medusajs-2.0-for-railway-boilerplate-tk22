@@ -38,7 +38,7 @@ export const KoalaWelcomeEmail = ({
         <Section style={btnContainer}>
           <Button
             style={button}
-            href="https://lalunecurieus-backend.up.railway.app/app/"
+            href="https://backend-production-90ae.up.railway.app/app/"
           >
             On va vite la découvrir !
           </Button>

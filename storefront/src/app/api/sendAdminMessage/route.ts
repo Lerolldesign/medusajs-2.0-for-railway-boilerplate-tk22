@@ -2,7 +2,7 @@
 import { render } from "@react-email/render"
 import type { NextApiRequest, NextApiResponse } from "next"
 import { Resend } from "resend"
-import WelcomeTemplate from "../../../../email"
+import KoalaWelcomeEmail from "../../../../email"
 
 const resend = new Resend(process.env.RESEND_API_KEY!)
 
@@ -19,10 +19,10 @@ export default async function handler(
 
   try {
     const { data } = await resend.emails.send({
-      from: "confirmation@lalunecurieuse.com",
+      from: "confirmation@atelier.lalunecurieuse.com",
       to: ["commande@lalunecurieuse.com"],
       subject: "Félicitation 🍻",
-      html: render(WelcomeTemplate({ userFirstname })),
+      html: render(KoalaWelcomeEmail({ userFirstname })),
     })
 
     res.status(200).json({ message: "Message bien envoyé", data })

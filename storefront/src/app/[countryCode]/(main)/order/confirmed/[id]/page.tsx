@@ -25,8 +25,28 @@ async function getOrder(id: string) {
 }
 
 export const metadata: Metadata = {
-  title: "Order Confirmed",
-  description: "You purchase was successful",
+  title: "Commande confirmée",
+  description: "Vos achat s'est bien passé",
+}
+
+async function sendEmail(userFirstname: string) {
+  try {
+    const response = await fetch("/api/sendAdminMessage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "commande@lalunecurieuse.com",
+        userFirstname,
+      }),
+    })
+    if (!response.ok) {
+      console.error("Échec de l'envoi de l'email")
+    }
+  } catch (error) {
+    console.error("Erreur lors de l'appel à l'API:", error)
+  }
 }
 
 export default async function OrderConfirmedPage({ params }: Props) {
@@ -34,6 +54,7 @@ export default async function OrderConfirmedPage({ params }: Props) {
   if (!order) {
     return notFound()
   }
-
+  // Envoyer l'email lors de la récupération de la commande
+  sendEmail(order.customer_firstname || "Client")
   return <OrderCompletedTemplate order={order} />
 }
