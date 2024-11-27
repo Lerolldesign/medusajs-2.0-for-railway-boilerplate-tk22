@@ -5,8 +5,9 @@ import CartTotals from "@modules/common/components/cart-totals"
 import Items from "@modules/order/components/items"
 import OrderDetails from "@modules/order/components/order-details"
 import ShippingDetails from "@modules/order/components/shipping-details"
-import axios from "axios"
-import { useState } from "react"
+import { sendConfirmation } from "../../../../lib/actions"
+
+import { useRef, useState } from "react"
 
 type OrderCompletedClientProps = {
   order: any // Type spécifique à définir
@@ -17,24 +18,25 @@ export default function OrderCompletedClient({
   order,
   isOnboarding,
 }: OrderCompletedClientProps) {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState("")
+  const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSendMessage = async () => {
-    setIsLoading(true)
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setIsSubmitting(true)
     setMessage("")
 
-    try {
-      // Effectuer une requête POST vers /api/sendAdminMessage avec les bons paramètres
-      const response = await axios.post("/api/sendAdminMessage", {
-        email: order.user?.email, // Assurez-vous que l'email de l'utilisateur est dans la commande
-        userFirstname: order.user?.firstName, // Assurez-vous que le prénom de l'utilisateur est dans la commande
-      })
-      setMessage(response.data.message)
-    } catch (error) {
-      setMessage("Échec de l'envoi du message")
-    } finally {
-      setIsLoading(false)
+    const formData = new FormData(event.currentTarget)
+    const result = await sendConfirmation(formData)
+
+    setIsSubmitting(false)
+
+    if (result.success) {
+      setMessage(result.message)
+      formRef.current?.reset()
+    } else {
+      setMessage(result.message)
     }
   }
 
@@ -63,13 +65,23 @@ export default function OrderCompletedClient({
       <ShippingDetails order={order} />
 
       <button
-        onClick={handleSendMessage}
-        className="bg-lune py-3 mt-3 lg:mt-10 w-[300px] rounded-full text-creamy font-semibold"
-        disabled={isLoading}
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-lune hover:bg-browny focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-creamy disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isLoading ? "Chargement..." : "Confirmez les informations"}
+        {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
       </button>
-      {message && <p className="mt-2 text-red-500">{message}</p>}
+      {message && (
+        <div
+          className={`mt-4 p-2 rounded ${
+            message.includes("succès")
+              ? "bg-green-100 text-lune"
+              : "bg-red-100 text-red-800"
+          }`}
+        >
+          {message}
+        </div>
+      )}
     </div>
   )
 }
