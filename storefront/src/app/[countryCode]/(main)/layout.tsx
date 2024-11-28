@@ -4,7 +4,6 @@ import { Metadata } from "next"
 //import Nav from "@modules/layout/templates/nav"
 import { getBaseURL } from "@lib/util/env"
 import Tidio from "@modules/elements/tidio"
-import FooterLune from "@modules/layout/templates/footerLune"
 import HeaderNew from "@modules/layout/templates/headernew"
 import Ornements from "@modules/layout/templates/ornements"
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
@@ -25,7 +24,6 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
       {props.children}
       {/**      <Footer />*/}
 
-      <FooterLune />
       <Tidio />
     </>
   )

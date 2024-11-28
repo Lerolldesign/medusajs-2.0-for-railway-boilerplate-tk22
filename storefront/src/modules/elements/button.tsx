@@ -3,7 +3,7 @@ import React from "react"
 type ButtonProps = {
   href: string
   children: React.ReactNode
-  variant?: "primary" | "secondary"
+  variant?: "primary" | "secondary" | "tertery"
   target?: string
   onClick?: () => void // Add onClick property
 }
@@ -27,6 +27,9 @@ const Button: React.FC<ButtonProps> = ({
     } else if (variant === "secondary") {
       baseClass += " border-lune"
       spanClass += " text-creamy bg-lune/5 hover:bg-lune ring-lune"
+    } else if (variant === "tertery") {
+      baseClass += " border-lune"
+      spanClass += " text-lune bg-lune/5 hover:bg-lune ring-lune"
     }
 
     return { baseClass, spanClass }

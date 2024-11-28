@@ -125,7 +125,7 @@
 @media only screen and (max-width: 980px) {
   #tidio-chat-iframe {
     bottom: 40px !important;
-    right: 30px !important;
+    right: 20px !important;
   }
 }
 .bg-ui-bg-base {

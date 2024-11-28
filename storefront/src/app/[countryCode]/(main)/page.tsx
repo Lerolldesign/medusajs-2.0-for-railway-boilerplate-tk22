@@ -11,6 +11,7 @@ import HomeSectionEnjoliver from "@modules/home/components/sections/enjoliver"
 import HomeSectionIlluminer from "@modules/home/components/sections/illuminer"
 import HomeSectionIntroText from "@modules/home/components/sections/introText"
 import HomeSectionRestaurer from "@modules/home/components/sections/restaurer"
+import FooterLune from "@modules/layout/templates/footerLune"
 //import CookieBot from "react-cookiebot"
 
 //import Hero from "@modules/home/components/hero"
@@ -48,6 +49,7 @@ export default async function Home({
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>  <CookieBot />*/}
+      <FooterLune />
       <CookieBot />
     </>
   )
