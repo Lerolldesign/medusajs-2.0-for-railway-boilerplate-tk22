@@ -1,10 +1,10 @@
 import { useActionState } from "react"
 
-import { login } from "@lib/data/customer"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
-import { SubmitButton } from "@modules/checkout/components/submit-button"
+import { SubmitButtonTwo } from "@modules/checkout/components/submit-button-two"
 import Input from "@modules/common/components/input"
+import { login } from "../../../../lib/data/customer"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
@@ -25,7 +25,7 @@ const Login = ({ setCurrentView }: Props) => {
         Connexion
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-8">
-        Connectez-vous à votre compte client afin de bénéficier d&apos;une
+        Connectez-vous à votre compte client afin de bénéficier d&apos;
         meilleure expérience.
       </p>
       <form className="w-full" action={formAction}>
@@ -50,9 +50,12 @@ const Login = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
         <div className=" mt-6 items-center flex justify-center">
-          <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
+          {/**  <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
             Connectez-vous
-          </SubmitButton>
+          </SubmitButton> */}
+          <SubmitButtonTwo data-testid="sign-in-button" className="w-full mt-6">
+            Connectez-vous
+          </SubmitButtonTwo>
         </div>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
