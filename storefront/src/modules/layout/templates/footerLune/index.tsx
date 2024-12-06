@@ -65,8 +65,10 @@ const FooterLune = () => {
             Céline rondot
           </h4>
           <p className="text-xs large:text-xl text-browny text-center w-full xsmall:w-1/2  2xlarge:w-1/2 justify-center flex item-center relative  xsmall:left-[25%] xlarge:left-[25%] px-12 2xlarge:px-0 ">
-            Vous avez besoin de rénover un siège confectionner une pièce
-            d&apos;expection, je suis là pour répondre à vos besoins.
+            Passionnée par mon métier, je vous invite à découvrir mon univers.
+            Que ce soit pour la conception d&apos;abat-jours ou créer des décors
+            uniques, je suis là pour réaliser vos projets sur mesure.
+            N&apos;hésitez pas à me contacter pour discuter de vos envies !
           </p>
           <div className="flex flex-col md:flex-row gap-5 items-center justify-center py-10">
             <div>
