@@ -1,23 +1,34 @@
+import { Metadata } from "next"
+import { notFound } from "next/navigation"
+
 import { enrichLineItems, retrieveCart } from "@lib/data/cart"
-import { getCustomer } from "@lib/data/customer"
+import { retrieveCustomer } from "@lib/data/customer"
+import { HttpTypes } from "@medusajs/types"
 import Wrapper from "@modules/checkout/components/payment-wrapper"
 import CheckoutForm from "@modules/checkout/templates/checkout-form"
 import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
 
-const fetchCartData = async () => {
+export const metadata: Metadata = {
+  title: "Checkout",
+}
+
+const fetchCart = async () => {
   const cart = await retrieveCart()
-  if (!cart) throw new Error("Cart not found")
+  if (!cart) {
+    return notFound()
+  }
 
   if (cart?.items?.length) {
-    cart.items = (await enrichLineItems(cart.items, cart.region_id!)) as any[]
+    const enrichedItems = await enrichLineItems(cart?.items, cart?.region_id!)
+    cart.items = enrichedItems as HttpTypes.StoreCartLineItem[]
   }
 
   return cart
 }
 
 export default async function Checkout() {
-  const cart = await fetchCartData()
-  const customer = await getCustomer()
+  const cart = await fetchCart()
+  const customer = await retrieveCustomer()
 
   return (
     <div className="grid grid-cols-1 small:grid-cols-[1fr_416px] content-container gap-x-40 py-12 ">
