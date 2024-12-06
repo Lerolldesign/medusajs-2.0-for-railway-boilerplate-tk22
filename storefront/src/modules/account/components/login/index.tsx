@@ -2,7 +2,7 @@ import { useActionState } from "react"
 
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
-import { SubmitButtonTwo } from "@modules/checkout/components/submit-button-two"
+import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import { login } from "../../../../lib/data/customer"
 
@@ -50,12 +50,9 @@ const Login = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
         <div className=" mt-6 items-center flex justify-center">
-          {/**  <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
+          <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
             Connectez-vous
-          </SubmitButton> */}
-          <SubmitButtonTwo data-testid="sign-in-button" className="w-full mt-6">
-            Connectez-vous
-          </SubmitButtonTwo>
+          </SubmitButton>
         </div>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
