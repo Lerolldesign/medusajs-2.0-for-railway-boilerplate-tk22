@@ -12,3 +12,4 @@ test-checkouk
 
 redeploiement
 test de login
+test cloudinary
