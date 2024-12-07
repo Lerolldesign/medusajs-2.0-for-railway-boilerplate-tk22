@@ -51,7 +51,7 @@ export default function CategoryTemplate({
             ))}
           {/**  <h1
             className="text-[#C87E53] font-lune text-[2.2rem]/[2.2rem] items-center text-center  xl:text-[4rem]/[4rem] max-w-xs   medium:max-w-lg"
-            data-testid="category-page-title "
+            data-testid="category-page-title \
           >
             {category.name}
           </h1> */}
@@ -60,13 +60,13 @@ export default function CategoryTemplate({
         <div className="mb-8 flex flex-col items-center justify-center ">
           {category.metadata && Object.keys(category.metadata).length > 0 && (
             <div>
-              <p className="font-lune text-[3.4rem] text-neutral-400 max-w-[60vw]">
+              <p className="font-lune text-[2rem]/[2.1rem] md:text-[2.4rem]/[2.5rem] lg:text-[3.4rem]/[3.5rem] text-neutral-400 max-w-[75vw] lg:max-w-[60vw] pt-5">
                 {String(Object.keys(category.metadata)[0])}
               </p>
-              <p className="text-lg text-[#C87E53]">
+              <p className="text-xs md:text-lg text-[#C87E53]">
                 - {String(Object.values(category.metadata)[0])}
               </p>
-              <p className="text-[1.2rem] max-w-[50vw]">
+              <p className="text-[.85rem]  md:text-[.9rem] lg:text-[1.15rem] max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] pt-7 lg:pt-10">
                 {category.description}
               </p>
             </div>

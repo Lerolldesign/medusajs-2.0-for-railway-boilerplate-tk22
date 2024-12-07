@@ -1,10 +1,10 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { menuSlide } from "../anim"
 import Curve from "./Curve"
 import Footer from "./Footer"
-import Link from "./Link"
 import styles from "./style.module.scss"
 
 const navItems = [
@@ -48,16 +48,24 @@ export default function Index() {
           <div className={styles.header}>
             <p>Menu</p>
           </div>
-          {navItems.map((data, index) => {
+
+          {/**   {navItems.map((data, index) => {
             return (
-              <Link
+              <LocalizedClientLink
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
-              ></Link>
+              ></LocalizedClientLink>
             )
-          })}
+          })} */}
+          <LocalizedClientLink
+            className="hover:text-ui-fg-base flex gap-2  "
+            href="/boutique"
+            data-testid="nav-cart-link"
+          >
+            shop
+          </LocalizedClientLink>
         </div>
         <Footer />
       </div>
