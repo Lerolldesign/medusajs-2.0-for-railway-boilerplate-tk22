@@ -12,19 +12,19 @@ const StepRestaurer: React.FC = () => {
         <p
           className="text-gray-600 md:px-5 lg:px-28 2xl:left-10 mx-10 md:mx-10 xl:mx-24 2xl:px-32 py-10 md:py-20  relative
          leading-6 2xl:leading-7 
-         text-[.85rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem] text-center "
+         text-[.85rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem] text-center"
         >
-          Que ce soit pour la création d’un abat-jour,la confections de vos
-          décors textiles, ou la restauration d’un siège, voici comment se
-          déroulera votre chantier
+          Que ce soit pour la création d&apos; un abat-jour,la confections de
+          vos décors textiles, ou la restauration d&apos;un siège, voici comment
+          se déroulera votre chantier
         </p>
       </div>
 
       <Accordion title="Prise de contact ">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Nous échangerons par téléphone ou mail pour déterminer la nature de
-          votre projet. L’envoi d’une photo peut me permettre de faire une 1
-          <sup>ère</sup>
+          votre projet. L&apos;envoi d&apos;une photo peut me permettre de faire
+          une 1<sup>ère</sup>
           évaluation. A ce moment nous prendrons rendez-vous.
         </p>
       </Accordion>
@@ -32,16 +32,16 @@ const StepRestaurer: React.FC = () => {
       <Accordion title="Premier rendez-vous">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Nous nous rencontrerons pour ce 1<sup>er</sup> rendez-vous soit à
-          l'atelier soit à votre domicile. Si il s’agit d’une réfection de
-          siège, ou une restauration d’abat-jour, il est préférable de venir
-          avec l'objet. Mon tarif varie en fonction du type de projet et du
-          choix de tissus. Si vous fournissez le tissu, le coût de la façon sera
-          majoré et le tissu ne sera pas garanti. Je me laisse également la
-          liberté de travailler ou non avec votre tissu si je ne le juge pas
-          adapté à votre projet
+          l'atelier soit à votre domicile. Si il s&apos;agit d&apos;une
+          réfection de siège, ou une restauration d&apos;abat-jour, il est
+          préférable de venir avec l'objet. Mon tarif varie en fonction du type
+          de projet et du choix de tissus. Si vous fournissez le tissu, le coût
+          de la façon sera majoré et le tissu ne sera pas garanti. Je me laisse
+          également la liberté de travailler ou non avec votre tissu si je ne le
+          juge pas adapté à votre projet
         </p>
       </Accordion>
-      <Accordion title="Dépôt de l’objet à l’atelier">
+      <Accordion title="Dépôt de l'objet à l'atelier">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Une fois le devis accepté vous pouvez venir déposer votre objet
           directement à l'atelier. Un enlèvement à domicile est envisageable
