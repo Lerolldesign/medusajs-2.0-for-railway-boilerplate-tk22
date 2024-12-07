@@ -131,12 +131,18 @@ const FooterLune = () => {
                 crafted /// Leroll D+sign
                 <sup className="size-2">©</sup>.
               </AnimatedLink>
-              <AnimatedLink href="/documents/mentions-legales">
+              <AnimatedLink className="z-40" href="/documents/mentions-legales">
                 MENTIONS LÉGALES
               </AnimatedLink>
-              <AnimatedLink href="/documents/cgv">C.G.V</AnimatedLink>
-              <AnimatedLink href="/boutique">BOUTIQUE </AnimatedLink>
-              <AnimatedLink href="/documents/cgu">COMMANDE </AnimatedLink>
+              <AnimatedLink className="z-40" href="/documents/cgv">
+                C.G.V
+              </AnimatedLink>
+              <AnimatedLink className="z-40" href="/boutique">
+                BOUTIQUE{" "}
+              </AnimatedLink>
+              <AnimatedLink className="z-40" href="/documents/cgu">
+                COMMANDE{" "}
+              </AnimatedLink>
             </div>
           </div>
         </div>

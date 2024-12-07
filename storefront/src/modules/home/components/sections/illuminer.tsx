@@ -20,7 +20,7 @@ export default function HomeSectionIlluminer() {
                 vos abat-jours
                 <span className="flex  w-[52vw]  relative top-[25vh] md:top-[28vh] xl:top-24 2xlarge:top-32 left-10 md:right-[20vw] lg:right-10 xl:left-[-10vw] 2xlarge:right-12  items-center font-inter justify-center">
                   <Button
-                    href="/services/illuminer-votre-interieur"
+                    href="/prestations/illuminer-votre-interieur"
                     variant="secondary"
                   >
                     Découvrir +
@@ -31,7 +31,7 @@ export default function HomeSectionIlluminer() {
           </div>
 
           <div className="relative z-10 bottom-[18vh] xl:bottom-0 md:w-2/3 md:mx-32">
-            <Link href="/services/illuminer-votre-interieur">
+            <Link href="/prestations/illuminer-votre-interieur">
               <Image
                 src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1716880738/La%20Lune%20Curieuse/Sections/section_homepage_illuminer_bis_rh8u9a.avif"
                 width={1920}

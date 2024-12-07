@@ -1,4 +1,3 @@
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
@@ -60,14 +59,6 @@ export default function Index() {
               ></Link>
             )
           })}
-          <LocalizedClientLink
-            className="hover:text-ui-fg-base flex gap-2 z-50 "
-            href="/boutique"
-            setSelectedIndicator={setSelectedIndicator}
-            data-testid="nav-store-link"
-          >
-            shop
-          </LocalizedClientLink>
         </div>
         <Footer />
       </div>

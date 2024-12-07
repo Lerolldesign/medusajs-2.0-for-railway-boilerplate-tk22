@@ -9,7 +9,7 @@ export default function HomeSectionRestaurer() {
       <div className="relative ">
         <div className="flex xl:flex-row flex-col items-center justify-center">
           <div className="relative z-10 bottom-[18vh] xl:bottom-0 md:w-2/3 md:mx-32">
-            <Link href="/services/restaurer-vos-sieges">
+            <Link href="/prestations/restaurer-vos-sieges">
               <Image
                 src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1716877176/La%20Lune%20Curieuse/Sections/section_homepage_restaurer_hl6ax3.avif"
                 width={1920}
@@ -27,7 +27,7 @@ export default function HomeSectionRestaurer() {
               </span>
               <span className="flex relative  top-[25vh] md:top-[28vh] xl:top-20 2xlarge:top-24 right-10 md:right-5 lg:right-10  2xlarge:right-32  items-center font-inter justify-center">
                 <Button
-                  href="/services/restaurer-vos-sieges"
+                  href="/prestations/restaurer-vos-sieges"
                   variant="secondary"
                 >
                   Découvrir +

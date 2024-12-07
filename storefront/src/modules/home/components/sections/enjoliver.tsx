@@ -14,7 +14,7 @@ export default function HomeSectionEnjoliver() {
                 vos décors textiles
                 <span className="flex relative  w-[52vw]  top-[26vh] md:top-[28vh] xl:top-20 2xlarge:top-24 left-4 md:right-20 lg:right-10  2xlarge:left-[-10vw] items-center font-inter justify-center">
                   <Button
-                    href="/services/enjoliver-vos-espaces"
+                    href="/prestations/enjoliver-vos-espaces"
                     variant="secondary"
                   >
                     Découvrir +
@@ -24,7 +24,7 @@ export default function HomeSectionEnjoliver() {
             </h3>
           </div>
           <div className="relative z-10 bottom-[18vh] xl:bottom-0 md:w-2/3 md:mx-32">
-            <Link href="/services/enjoliver-vos-espaces">
+            <Link href="/prestations/enjoliver-vos-espaces">
               <Image
                 src="https://res.cloudinary.com/dvdup4fx9/image/upload/v1716877180/La%20Lune%20Curieuse/Sections/section_homepage_amenager_dxtvgg.avif"
                 width={1920}

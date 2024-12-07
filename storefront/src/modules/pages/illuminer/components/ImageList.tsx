@@ -24,22 +24,23 @@ const ImageList = () => {
       >
         scroll to anchor
       </button>*/}
-      <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 md:w-screen md:gap-3 md:px-20 h-full   md:my-auto bg-[#131313] noise py-32">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5  lg:w-screen md:gap-3 md:px-20 h-full   md:my-auto bg-[#131313] noise py-32">
         <div className="flex-col gap-3 md:gap-5 ">
           {/*01*/}
           <Parallax speed={1} className="self-start">
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/05.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568281/La%20Lune%20Curieuse/grids/abat-jour/05_l7tb92.avif"
               }
               alt="Image"
               width={600}
-              height={400}
+              height={500}
               priority
               sizes="30vw"
             />
           </Parallax>
+
           {/*02 hidden*/}
           <Parallax speed={-20} className="hidden self-center overflow-hidden">
             <Image
@@ -55,11 +56,11 @@ const ImageList = () => {
             />
           </Parallax>
           {/*03 hidden*/}
-          <Parallax speed={2} className="hidden self-end">
+          <Parallax speed={3} className="self-end">
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/07.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733567498/La%20Lune%20Curieuse/grids/abat-jour/flower_pzuxkc.jpg"
               }
               alt="Image"
               width={400}
@@ -75,7 +76,7 @@ const ImageList = () => {
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/01.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568462/La%20Lune%20Curieuse/grids/abat-jour/01_fakrdt.avif"
               }
               alt="Image"
               width={600}
@@ -84,11 +85,11 @@ const ImageList = () => {
             />
           </Parallax>
           {/*05*/}
-          <Parallax speed={-2} className="self-end">
+          <Parallax speed={-1} className="self-end">
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/04.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733567501/La%20Lune%20Curieuse/grids/abat-jour/bergere-abat-jour-jaune_tvfrnv.jpg"
               }
               alt="Image"
               width={600}
@@ -97,10 +98,11 @@ const ImageList = () => {
             />
           </Parallax>
           {/*06 hidden*/}
-          <Parallax speed={2} className="hidden self-start">
+          <Parallax speed={-1} className="self-start">
             <Image
+              className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer_vos_interieurs.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733567503/La%20Lune%20Curieuse/grids/abat-jour/combe_awuvwl.jpg"
               }
               alt="Image"
               width={600}
@@ -116,7 +118,7 @@ const ImageList = () => {
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/04.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568499/La%20Lune%20Curieuse/grids/abat-jour/04_oyxofp.avif"
               }
               alt="Image"
               width={400}
@@ -129,7 +131,7 @@ const ImageList = () => {
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/02.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568652/La%20Lune%20Curieuse/grids/abat-jour/02_ib6nkc.avif"
               }
               alt="Image"
               width={600}
@@ -138,27 +140,27 @@ const ImageList = () => {
             />
           </Parallax>
 
-          <Parallax speed={-1} className="self-start hidden">
+          <Parallax speed={-1} className="self-start ">
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer_vos_interieurs.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733567502/La%20Lune%20Curieuse/grids/abat-jour/kitch_bz2bxp.jpg"
               }
               alt="Image"
               width={600}
-              height={400}
+              height={500}
               sizes="50vw"
               id="last-image"
             />
           </Parallax>
         </div>
 
-        <div className="flex-col gap-3 md:gap-5">
-          <Parallax speed={1} className="self-center">
+        <div className="flex-col gap-3 md:gap-5 block md:hidden lg:block">
+          <Parallax speed={1} className="self-start">
             <Image
               className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer/galery/03.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568296/La%20Lune%20Curieuse/grids/abat-jour/03_uipn2r.avif"
               }
               alt="Image"
               width={400}
@@ -166,29 +168,16 @@ const ImageList = () => {
               sizes="50vw"
             />
           </Parallax>
-
-          <Parallax speed={0} className="self-end hidden">
+          <Parallax speed={2} className="self-end">
             <Image
+              className="rounded-[2rem]"
               src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer_vos_interieurs.avif"
+                "https://res.cloudinary.com/dvdup4fx9/image/upload/v1733568516/La%20Lune%20Curieuse/grids/abat-jour/06_xbxvxz.avif"
               }
               alt="Image"
-              width={600}
-              height={400}
+              width={400}
+              height={600}
               sizes="50vw"
-            />
-          </Parallax>
-
-          <Parallax speed={2} className="hidden self-start">
-            <Image
-              src={
-                "https://lunecloud.fra1.digitaloceanspaces.com/illuminer_vos_interieurs.avif"
-              }
-              alt="Image"
-              width={600}
-              height={400}
-              sizes="50vw"
-              id="last-image"
             />
           </Parallax>
         </div>

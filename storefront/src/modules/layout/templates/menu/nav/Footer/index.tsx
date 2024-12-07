@@ -12,7 +12,7 @@ export default function Index() {
       >
         Contact
       </LocalizedClientLink>
-      <div className="max-w-[50vw] flex relative right-20 gap-5">
+      <div className="max-w-[90vw] items-center md:max-w-[50vw] flex relative right-10 md:right-20 gap-5">
         <LocalizedClientLink
           className="hover:text-lune text-[1.75rem]"
           data-testid="nav-store-link"
