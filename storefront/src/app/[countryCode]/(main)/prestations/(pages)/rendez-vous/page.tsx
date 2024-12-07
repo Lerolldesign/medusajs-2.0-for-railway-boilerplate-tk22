@@ -2,7 +2,7 @@ import StepRestaurer from "@modules/pages/restaurer/stepRestaurer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Comment faire une restauration ?",
+  title: "Comment se déroule un chantier ?",
   description:
     "Réfection complète ou partielle suivant une technique semi-traditionnelle. Fauteuil, tabouret, chaise, banquette, pouf, abat-jour.",
 }
