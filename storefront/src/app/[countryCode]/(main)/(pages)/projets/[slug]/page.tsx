@@ -1,3 +1,4 @@
+import Back from "@modules/pages/projet/back"
 import Description from "@modules/pages/projet/description"
 import HeaderGallery from "@modules/pages/projet/heroBanner"
 import { Metadata } from "next"
@@ -61,9 +62,13 @@ const page = async ({ params }: Params) => {
 
   return (
     <StrictMode>
-      <HeaderGallery galerie={galerie} />
-      <Description galerie={galerie} />
-      {/**   <GalerieProject galerie={galerie} />*/}
+      <div className="bg-[#121212] noise">
+        <HeaderGallery galerie={galerie} />
+
+        <Description galerie={galerie} />
+        <Back />
+        {/**   <GalerieProject galerie={galerie} />*/}
+      </div>
     </StrictMode>
   )
 }

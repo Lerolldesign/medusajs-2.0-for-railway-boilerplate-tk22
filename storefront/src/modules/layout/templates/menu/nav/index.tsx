@@ -60,7 +60,10 @@ export default function Index() {
             )
           })}
         </div>
-        <Footer />
+        <div className="relative bottom-10">
+          {" "}
+          <Footer />
+        </div>
       </div>
       <Curve />
     </motion.div>

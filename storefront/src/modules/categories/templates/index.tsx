@@ -60,13 +60,19 @@ export default function CategoryTemplate({
         <div className="mb-8 flex flex-col items-center justify-center ">
           {category.metadata && Object.keys(category.metadata).length > 0 && (
             <div>
-              <p className="font-lune text-[2rem]/[2.1rem] md:text-[2.4rem]/[2.5rem] lg:text-[3.4rem]/[3.5rem] text-neutral-400 max-w-[75vw] lg:max-w-[60vw] pt-5">
-                {String(Object.keys(category.metadata)[0])}
+              <p className="font-lune text-[2rem]/[2.1rem] md:text-[2.4rem]/[2.5rem] lg:text-[3.4rem]/[3.5rem] text-neutral-400 max-w-[80vw] md:max-w-[75vw] lg:max-w-[60vw] pt-5">
+                <span className="text-[2.7rem] lg:text-[4rem]">
+                  &apos;&apos;
+                </span>{" "}
+                {String(Object.keys(category.metadata)[0])}{" "}
+                <span className="text-[2.7rem] lg:text-[4rem]">
+                  &apos;&apos;
+                </span>
               </p>
-              <p className="text-xs md:text-lg text-[#C87E53]">
+              <p className="text-xs lg:text-lg text-[#C87E53]">
                 - {String(Object.values(category.metadata)[0])}
               </p>
-              <p className="text-[.85rem]  md:text-[.9rem] lg:text-[1.15rem] max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] pt-7 lg:pt-10">
+              <p className="text-[.85rem] text-neutral-700  md:text-[.9rem] lg:text-[1.15rem] max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] py-7 lg:py-10">
                 {category.description}
               </p>
             </div>

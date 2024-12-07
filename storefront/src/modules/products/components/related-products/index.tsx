@@ -61,7 +61,7 @@ export default async function RelatedProducts({
         <span className="text-base-regular text-gray-600 mb-6">
           CATÉGORIE SIMILAIRE
         </span>
-        <p className=" text-lune! font-lune text-[2.2rem]/[2.2rem]  xl:text-[4rem]/[4rem] max-w-xs   medium:max-w-lg">
+        <p className=" text-[#C87E53] font-lune text-[2.2rem]/[2.2rem]  xl:text-[4rem]/[4rem] max-w-xs   medium:max-w-lg">
           Vous aimerez peut-être aussi !
         </p>
       </div>

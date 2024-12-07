@@ -5,7 +5,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Button from "@modules/elements/button"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import { urlForImage } from "../../../lib/sanity/image"
@@ -18,9 +17,9 @@ interface Props {
 export default function Description({ galerie }: Props) {
   return (
     <>
-      <div className=" bg-[#121212] noise  bottom-20 md:bottom-44 xl:bottom-[-10vw] ">
-        <div className=" h-[100vh] md:h-[100vh] flex flex-col xl:flex-row gap-10 w-full xl:px-32 px-10  relative bottom-32 xl:bottom-[-10vh]  items-center justify-center">
-          <div className="md:w-2/3 xl:w-1/2 relative bottom-20 md:bottom-0">
+      <div className="  relative  top-[35vw] md:top-0  md:bottom-[-20vw] xl:bottom-[-10vw] ">
+        <div className=" h-[60vh] md:h-[45vh]  lg:h-[100vh] flex flex-col xl:flex-row gap-10 w-full xl:px-32 px-10  relative bottom-20 md:bottom-[-10vh]  xl:bottom-[-10vh]  items-center justify-center">
+          <div className="md:w-2/3 xl:w-1/2 relative bottom-10 md:bottom-0">
             <h2 className="font-lune text-lune uppercase text-[2rem] xl:text-[3rem] 2xl:text-[4rem]">
               La demande
             </h2>
@@ -39,17 +38,19 @@ export default function Description({ galerie }: Props) {
             <div className="relative bottom-20 md:bottom-0">
               <h3 className="text-gray-500 py-3 md:py-5">Client</h3>
               <h4 className="text-creamy">{galerie.categorie}</h4>
-              <h3 className="text-gray-500 py-3 md:py-5">
+
+              {/**    <h3 className="text-gray-500 py-3 md:py-5">
                 Année de réalisation
-              </h3>
+              </h3> */}
+
               <span></span>
             </div>
             <a className="text-creamy" href={`${galerie.link}`}>
-              <div className="w-1/2 absolute  right-[13vw] xl:right-[7vw] 2xl:right-[13vw] mt-[-3vh] md:mt-20">
+              {/**  <div className="w-1/2 absolute  right-[13vw] xl:right-[7vw] 2xl:right-[13vw] mt-[-3vh] md:mt-20">
                 <Button href="atelier" variant="secondary">
                   Découvrir le projet
                 </Button>
-              </div>
+              </div> */}
             </a>
           </div>
         </div>
