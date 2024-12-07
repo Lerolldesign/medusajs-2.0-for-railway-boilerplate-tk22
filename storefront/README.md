@@ -12,4 +12,4 @@ test-checkouk
 
 redeploiement
 test de login
-test cloudinary reload backend
+test cloudinary reload backend pnpm lock
