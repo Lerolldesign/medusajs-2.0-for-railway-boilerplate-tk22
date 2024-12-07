@@ -12,4 +12,4 @@ test-checkouk
 
 redeploiement
 test de login
-test cloudinary
+test cloudinary reload backend
