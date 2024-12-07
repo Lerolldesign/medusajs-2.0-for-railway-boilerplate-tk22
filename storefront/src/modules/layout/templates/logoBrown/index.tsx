@@ -1,5 +1,5 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Image from "next/image"
-import Link from "next/link"
 export default function Logo_brown() {
   return (
     <div>
@@ -26,7 +26,7 @@ const Logo_brown = () => {
 export default Logo_brown
  */}
 
-      <Link href="./">
+      <LocalizedClientLink href="/" data-testid="nav-store-link">
         <Image
           className="w-[18vw] md:w-[11vw] lg:w-[6.5vw] 2xl:w-[5.5vw]  "
           src="https://lunecloud.fra1.digitaloceanspaces.com/logo-ocre.png"
@@ -34,7 +34,7 @@ export default Logo_brown
           width="100"
           alt="Logo"
         />
-      </Link>
+      </LocalizedClientLink>
 
       {/**   <Link href="./">
         <Image

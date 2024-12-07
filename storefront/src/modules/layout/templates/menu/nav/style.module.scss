@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Charlotte";
+  src: url("../../../../../fonts/charlotte.ttf") format("truetype"); // Ajout de la police
+}
+
 .menu {
   height: 100vh;
   background-color: rgb(41, 41, 41);
@@ -33,6 +38,28 @@
         text-decoration: none;
         color: white;
         font-weight: 300;
+        font-family: "Charlotte";
+      }
+    }
+  }
+}
+// Media queries pour les tablettes
+@media (max-width: 768px) {
+  .menu {
+    .nav {
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Media queries pour les mobiles
+@media (max-width: 480px) {
+  .menu {
+    .nav {
+      a {
+        font-size: 2rem;
       }
     }
   }
