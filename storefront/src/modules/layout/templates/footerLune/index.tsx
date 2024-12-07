@@ -42,7 +42,7 @@ const FooterLune = () => {
   return (
     <footer
       id="footer"
-      className="relative bg-[#111111] noise  overflow-hidden h-[80vh] xsmall:h-[60vh] medium:h-[70vh]  large:h-[92vh] xlarge:h-[75vh]  2xlarge:h-[92vh] py-48   text-white text-center"
+      className="relative   overflow-hidden h-[80vh] xsmall:h-[60vh] medium:h-[70vh]  large:h-[92vh] xlarge:h-[75vh]  2xlarge:h-[92vh] py-48   text-white text-center"
     >
       <div
         id="circle"
@@ -125,7 +125,7 @@ const FooterLune = () => {
           <div className="flex z-40 justify-center text-[.68rem] xsmall:text-[.8rem]   2xlarge:text-[.85rem] text-center text-browny font-extrabold gap-3 2xlarge:gap-5 w-full py-10 xsmall:py-20 xlarge:py-10">
             <div className="flex gap-5 relative left-3">
               <AnimatedLink
-                className="hidden md:block absolute right-[11vw] medium:right-[17vw] large:right-[25vw] xlarge:right-[35vw] txt-compact-small font-bold "
+                className="hidden lg:block absolute right-[11vw] medium:right-[15vw] large:right-[25vw] xlarge:right-[35vw] txt-compact-small font-bold "
                 href="/documents/mentions-legales"
               >
                 crafted /// Leroll D+sign

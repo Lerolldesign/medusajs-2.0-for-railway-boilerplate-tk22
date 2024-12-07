@@ -8,12 +8,12 @@ export default function Restauration() {
         href="/prestations/rendez-vous"
         data-testid="nav-store-link"
       >
-        <h3 className=" text-[2.2rem] leading-[2.5rem] md:text-[3rem] xl:text-7xl 2xl:text-[6rem] font-lune uppercase text-lune w-full md:max-w-[60vw]  lg:max-w-[50vw]">
+        <h3 className=" text-[2.2rem] leading-[2.5rem] md:text-[3rem]/[2.8rem] xl:text-7xl 2xl:text-[6rem] font-lune uppercase text-lune w-full md:max-w-[60vw]  lg:max-w-[50vw]">
           Comment faire une restauration ?
         </h3>
       </LocalizedClientLink>
       <AnimatedLink
-        className="z-40 relative  md:left-[60vw]   lg:left-[40vw] text-[1.1rem] lg:bottom-[8vh]"
+        className="z-40 relative  md:left-[50vw]   lg:left-[40vw] text-[1.1rem] lg:bottom-[8vh]"
         href="/prestations/rendez-vous"
       >
         en savoir +
