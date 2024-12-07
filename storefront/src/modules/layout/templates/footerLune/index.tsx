@@ -42,7 +42,7 @@ const FooterLune = () => {
   return (
     <footer
       id="footer"
-      className="relative bg-[#111111] noise  overflow-hidden h-[80vh] xsmall:h-[60vh] medium:h-[70vh]  large:h-[92vh] xlarge:h-[75vh]  2xlarge:h-[90vh] py-48   text-white text-center"
+      className="relative bg-[#111111] noise  overflow-hidden h-[80vh] xsmall:h-[60vh] medium:h-[70vh]  large:h-[92vh] xlarge:h-[75vh]  2xlarge:h-[92vh] py-48   text-white text-center"
     >
       <div
         id="circle"
@@ -64,7 +64,7 @@ const FooterLune = () => {
           <h4 className="text-lune font-lune text-[2.4rem] xsmall:text-[4rem] medium:text-[6rem] large:text-[8rem]  xlarge:text-[9.5rem] 2xlarge:text-[10rem]">
             Céline rondot
           </h4>
-          <p className="text-xs large:text-xl text-browny text-center w-full xsmall:w-1/2  2xlarge:w-1/2 justify-center flex item-center relative  xsmall:left-[25%] xlarge:left-[25%] px-12 2xlarge:px-0 ">
+          <p className="text-xs large:text-xl text-browny text-center w-full xsmall:w-1/2  2xlarge:w-1/2 justify-center flex item-center relative  xsmall:left-[25%] xlarge:left-[25%] px-12 2xlarge:px-20 ">
             Passionnée par mon métier, je vous invite à découvrir mon univers.
             Que ce soit pour la conception d&apos;abat-jours ou créer des décors
             uniques, je suis là pour réaliser vos projets sur mesure.

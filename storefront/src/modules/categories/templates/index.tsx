@@ -49,18 +49,30 @@ export default function CategoryTemplate({
                 </LocalizedClientLink>
               </span>
             ))}
-          <h1
-            className="text-lune! font-lune text-[2.2rem]/[2.2rem] items-center text-center  xl:text-[4rem]/[4rem] max-w-xs   medium:max-w-lg"
+          {/**  <h1
+            className="text-[#C87E53] font-lune text-[2.2rem]/[2.2rem] items-center text-center  xl:text-[4rem]/[4rem] max-w-xs   medium:max-w-lg"
             data-testid="category-page-title "
           >
             {category.name}
-          </h1>
+          </h1> */}
         </div>
-        {category.description && (
-          <div className="mb-8 text-base-regular">
-            <p>{category.description}</p>
-          </div>
-        )}
+
+        <div className="mb-8 flex flex-col items-center justify-center ">
+          {category.metadata && Object.keys(category.metadata).length > 0 && (
+            <div>
+              <p className="font-lune text-[3.4rem] text-neutral-400 max-w-[60vw]">
+                {String(Object.keys(category.metadata)[0])}
+              </p>
+              <p className="text-lg text-[#C87E53]">
+                - {String(Object.values(category.metadata)[0])}
+              </p>
+              <p className="text-[1.2rem] max-w-[50vw]">
+                {category.description}
+              </p>
+            </div>
+          )}
+        </div>
+
         {category.category_children && (
           <div className="mb-8 text-base-large">
             <ul className="grid grid-cols-1 gap-2">
