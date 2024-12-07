@@ -2,9 +2,9 @@ import Button from "@modules/elements/button"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { client } from "../../../../lib/sanity/client"
-import { urlForImage } from "../../../../lib/sanity/image"
-import { Galerie } from "../../../../lib/util/interface"
+import { client } from "../../../../../lib/sanity/client"
+import { urlForImage } from "../../../../../lib/sanity/image"
+import { Galerie } from "../../../../../lib/util/interface"
 
 export const metadata: Metadata = {
   title: "Réalisations - Du rêve à la réalité",

@@ -37,7 +37,7 @@ export default async function Home({
   }
 
   return (
-    <>
+    <div className="bg-[#111111] noise ">
       <Banner />
       <HomeSectionIlluminer />
       <HomeSectionRestaurer />
@@ -51,6 +51,6 @@ export default async function Home({
       </div>  <CookieBot />*/}
       <FooterLune />
       <CookieBot />
-    </>
+    </div>
   )
 }

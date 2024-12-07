@@ -19,14 +19,9 @@ export const HoverImageLinks = () => {
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731921806/La%20Lune%20Curieuse/Collection/abat%20jour/ao/double-bat_yjdyoq.png"
           href="/categories/abat-jour"
         />
+
         <Link
-          heading="Tabourets"
-          subheading="Tabouret upcyclé et remis au goût du jour, pour une nouvelle vie et une démarche responsable"
-          imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731921925/La%20Lune%20Curieuse/Collection/tabourets/idris/double-bat_n3oxcg.png"
-          href="/categories/tabourets"
-        />
-        <Link
-          heading="Sacs"
+          heading="Sacs Mabou"
           subheading="Sac cabas sympa et solide upcyclé pour faire ses courses et bien d'autres encore"
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731922783/La%20Lune%20Curieuse/Collection/sacs/bangalore/bat_prod_galleryune_ejvrtb.jpg"
           href="/categories/tabourets"
