@@ -21,10 +21,10 @@ export const HoverImageLinks = () => {
         />
 
         <Link
-          heading="Sacs Mabou"
+          heading="Sacs. Mabou"
           subheading="Sac cabas sympa et solide upcyclé pour faire ses courses et bien d'autres encore"
           imgSrc="https://res.cloudinary.com/dvdup4fx9/image/upload/v1731922783/La%20Lune%20Curieuse/Collection/sacs/bangalore/bat_prod_galleryune_ejvrtb.jpg"
-          href="/categories/tabourets"
+          href="/categories/sacs-mabou"
         />
       </div>
       {/** 
