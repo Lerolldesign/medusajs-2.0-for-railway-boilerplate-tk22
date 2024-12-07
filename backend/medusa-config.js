@@ -1,8 +1,10 @@
-import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
 import {
   ADMIN_CORS,
   AUTH_CORS,
   BACKEND_URL,
+  CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET,
+  CLOUDINARY_CLOUD_NAME,
   COOKIE_SECRET,
   DATABASE_URL,
   JWT_SECRET,
@@ -15,8 +17,9 @@ import {
   STORE_CORS,
   STRIPE_API_KEY,
   STRIPE_WEBHOOK_SECRET,
-  WORKER_MODE
-} from '@/lib/constants';
+  WORKER_MODE,
+} from "@/lib/constants";
+import { defineConfig, loadEnv, Modules } from "@medusajs/utils";
 
 loadEnv(process.env.NODE_ENV, process.cwd());
 
@@ -31,8 +34,8 @@ const medusaConfig = {
       authCors: AUTH_CORS,
       storeCors: STORE_CORS,
       jwtSecret: JWT_SECRET,
-      cookieSecret: COOKIE_SECRET
-    }
+      cookieSecret: COOKIE_SECRET,
+    },
   },
   admin: {
     backendUrl: BACKEND_URL,
@@ -41,82 +44,114 @@ const medusaConfig = {
   modules: [
     {
       key: Modules.FILE,
-      resolve: '@medusajs/file',
+      resolve: "@medusajs/file",
       options: {
         providers: [
           {
-            resolve: '@medusajs/file-local',
-            id: 'local',
+            resolve: "@medusajs/file-local",
+            id: "local",
             options: {
-              upload_dir: 'static',
-              backend_url: `${BACKEND_URL}/static`
-            }
-          }
-        ]
-      }
-    },
-    ...(REDIS_URL ? [{
-      key: Modules.EVENT_BUS,
-      resolve: '@medusajs/event-bus-redis',
-      options: {
-        redisUrl: REDIS_URL
-      }
-    },
-    {
-      key: Modules.WORKFLOW_ENGINE,
-      resolve: '@medusajs/workflow-engine-redis',
-      options: {
-        redis: {
-          url: REDIS_URL,
-        }
-      }
-    }] : []),
-    ...(SENDGRID_API_KEY && SENDGRID_FROM_EMAIL || RESEND_API_KEY && RESEND_FROM_EMAIL ? [{
-      key: Modules.NOTIFICATION,
-      resolve: '@medusajs/notification',
-      options: {
-        providers: [
-          ...(SENDGRID_API_KEY && SENDGRID_FROM_EMAIL ? [{
-            resolve: '@medusajs/notification-sendgrid',
-            id: 'sendgrid',
-            options: {
-              channels: ['email'],
-              api_key: SENDGRID_API_KEY,
-              from: SENDGRID_FROM_EMAIL,
-            }
-          }] : []),
-          ...(RESEND_API_KEY && RESEND_FROM_EMAIL ? [{
-            resolve: './src/modules/email-notifications',
-            id: 'resend',
-            options: {
-              channels: ['email'],
-              api_key: RESEND_API_KEY,
-              from: RESEND_FROM_EMAIL,
-            },
-          }] : []),
-        ]
-      }
-    }] : []),
-    ...(STRIPE_API_KEY && STRIPE_WEBHOOK_SECRET ? [{
-      key: Modules.PAYMENT,
-      resolve: '@medusajs/payment',
-      options: {
-        providers: [
-          {
-            resolve: '@medusajs/payment-stripe',
-            id: 'stripe',
-            options: {
-              apiKey: STRIPE_API_KEY,
-              webhookSecret: STRIPE_WEBHOOK_SECRET,
+              upload_dir: "static",
+              backend_url: `${BACKEND_URL}/static`,
             },
           },
         ],
       },
-    }] : [])
+    },
+    ...(REDIS_URL
+      ? [
+          {
+            key: Modules.EVENT_BUS,
+            resolve: "@medusajs/event-bus-redis",
+            options: {
+              redisUrl: REDIS_URL,
+            },
+          },
+          {
+            key: Modules.WORKFLOW_ENGINE,
+            resolve: "@medusajs/workflow-engine-redis",
+            options: {
+              redis: {
+                url: REDIS_URL,
+              },
+            },
+          },
+        ]
+      : []),
+    ...((SENDGRID_API_KEY && SENDGRID_FROM_EMAIL) ||
+    (RESEND_API_KEY && RESEND_FROM_EMAIL)
+      ? [
+          {
+            key: Modules.NOTIFICATION,
+            resolve: "@medusajs/notification",
+            options: {
+              providers: [
+                ...(SENDGRID_API_KEY && SENDGRID_FROM_EMAIL
+                  ? [
+                      {
+                        resolve: "@medusajs/notification-sendgrid",
+                        id: "sendgrid",
+                        options: {
+                          channels: ["email"],
+                          api_key: SENDGRID_API_KEY,
+                          from: SENDGRID_FROM_EMAIL,
+                        },
+                      },
+                    ]
+                  : []),
+                ...(RESEND_API_KEY && RESEND_FROM_EMAIL
+                  ? [
+                      {
+                        resolve: "./src/modules/email-notifications",
+                        id: "resend",
+                        options: {
+                          channels: ["email"],
+                          api_key: RESEND_API_KEY,
+                          from: RESEND_FROM_EMAIL,
+                        },
+                      },
+                    ]
+                  : []),
+              ],
+            },
+          },
+        ]
+      : []),
+    ...(STRIPE_API_KEY && STRIPE_WEBHOOK_SECRET
+      ? [
+          {
+            key: Modules.PAYMENT,
+            resolve: "@medusajs/payment",
+            options: {
+              providers: [
+                {
+                  resolve: "@medusajs/payment-stripe",
+                  id: "stripe",
+                  options: {
+                    apiKey: STRIPE_API_KEY,
+                    webhookSecret: STRIPE_WEBHOOK_SECRET,
+                  },
+                },
+              ],
+            },
+          },
+        ]
+      : []),
+    // Ajout du plugin Cloudinary
+    {
+      key: Modules.FILE,
+      resolve: "medusa-file-cloudinary",
+      options: {
+        cloud_name: CLOUDINARY_CLOUD_NAME,
+        api_key: CLOUDINARY_API_KEY,
+        api_secret: CLOUDINARY_API_SECRET,
+        secure: true,
+      },
+    },
   ],
   plugins: [
     // 'medusa-fulfillment-manual'
-  ]
+  ],
 };
 
 // console.log(JSON.stringify(medusaConfig, null, 2));
