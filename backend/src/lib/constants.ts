@@ -87,13 +87,6 @@ export const STRIPE_API_KEY = process.env.STRIPE_API_KEY;
 export const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
 /**
- * (optional) Cloudinary
- */
-export const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;
-export const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY;
-export const CLOUDINARY_API_SECRET = process.env.STRIPE_API_KEY;
-
-/**
  * Worker mode
  */
 export const WORKER_MODE =

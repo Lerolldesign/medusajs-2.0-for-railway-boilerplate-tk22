@@ -2,9 +2,6 @@ import {
   ADMIN_CORS,
   AUTH_CORS,
   BACKEND_URL,
-  CLOUDINARY_API_KEY,
-  CLOUDINARY_API_SECRET,
-  CLOUDINARY_CLOUD_NAME,
   COOKIE_SECRET,
   DATABASE_URL,
   JWT_SECRET,
@@ -138,16 +135,16 @@ const medusaConfig = {
         ]
       : []),
     // Ajout du plugin Cloudinary
-    {
-      key: Modules.FILE,
-      resolve: "medusa-file-cloudinary",
-      options: {
-        cloud_name: CLOUDINARY_CLOUD_NAME,
-        api_key: CLOUDINARY_API_KEY,
-        api_secret: CLOUDINARY_API_SECRET,
-        secure: true,
-      },
-    },
+    //   {
+    //   key: Modules.FILE,
+    //   resolve: "medusa-file-cloudinary",
+    //  options: {
+    //   cloud_name: CLOUDINARY_CLOUD_NAME,
+    //  api_key: CLOUDINARY_API_KEY,
+    //  api_secret: CLOUDINARY_API_SECRET,
+    //  secure: true,
+    // },
+    // },
   ],
   plugins: [
     // 'medusa-fulfillment-manual'
