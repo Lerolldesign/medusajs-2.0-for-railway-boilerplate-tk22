@@ -38,7 +38,7 @@ const StepRestaurer: React.FC = () => {
           type de projet et du choix de tissus. Si vous fournissez le tissu, le
           coût de la façon sera majoré et le tissu ne sera pas garanti. Je me
           laisse également la liberté de travailler ou non avec votre tissu si
-          je ne le juge pas adapté à votre projet
+          je ne le juge pas adapté à votre projet.
         </p>
       </Accordion>
       <Accordion title="Dépôt de l'objet à l'atelier">
