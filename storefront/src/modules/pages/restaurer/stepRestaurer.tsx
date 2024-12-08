@@ -32,32 +32,32 @@ const StepRestaurer: React.FC = () => {
       <Accordion title="Premier rendez-vous">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Nous nous rencontrerons pour ce 1<sup>er</sup> rendez-vous soit à
-          l'atelier soit à votre domicile. Si il s&apos;agit d&apos;une
+          l&apos;atelier soit à votre domicile. Si il s&apos;agit d&apos;une
           réfection de siège, ou une restauration d&apos;abat-jour, il est
-          préférable de venir avec l'objet. Mon tarif varie en fonction du type
-          de projet et du choix de tissus. Si vous fournissez le tissu, le coût
-          de la façon sera majoré et le tissu ne sera pas garanti. Je me laisse
-          également la liberté de travailler ou non avec votre tissu si je ne le
-          juge pas adapté à votre projet
+          préférable de venir avec l&apos;objet. Mon tarif varie en fonction du
+          type de projet et du choix de tissus. Si vous fournissez le tissu, le
+          coût de la façon sera majoré et le tissu ne sera pas garanti. Je me
+          laisse également la liberté de travailler ou non avec votre tissu si
+          je ne le juge pas adapté à votre projet
         </p>
       </Accordion>
       <Accordion title="Dépôt de l'objet à l'atelier">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Une fois le devis accepté vous pouvez venir déposer votre objet
-          directement à l'atelier. Un enlèvement à domicile est envisageable
-          mais des frais de déplacement pourront être facturés.
+          directement à l&apos;atelier. Un enlèvement à domicile est
+          envisageable mais des frais de déplacement pourront être facturés.
         </p>
       </Accordion>
       <Accordion title="Réalisation">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
-          Si vous le souhaitez, vous disposerez d'un suivi dans les étapes de
-          réalisation de votre projet.
+          Si vous le souhaitez, vous disposerez d&apos;un suivi dans les étapes
+          de réalisation de votre projet.
         </p>
       </Accordion>
       <Accordion title="Retrait ou livraison">
         <p className="text-[.70rem] xl:leading-6  xl:text-[.85rem] 2xl:text-[.98rem]  px-[20vw] pb-10">
           Vous pouvez venir retirer votre objet une fois restauré directement à
-          l'atelier. Une livraison est également envisageable toutefois des
+          l&apos;atelier. Une livraison est également envisageable toutefois des
           frais de déplacement seront à envisager.
         </p>
       </Accordion>
